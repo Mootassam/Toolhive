@@ -1,4 +1,4 @@
-# ToolHive — Free QR Code Generator
+# QRHoney — Free QR Code Generator (qrhoney.com)
 
 Next.js 15 (App Router, static pages) + Tailwind. 10 languages, 207 pre-rendered pages, everything runs in the browser.
 

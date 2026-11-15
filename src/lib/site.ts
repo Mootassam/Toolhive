@@ -1,8 +1,8 @@
 // One place to change the brand name and domain.
 export const SITE = {
-  name: "ToolHive",
+  name: "QRHoney",
   // Set NEXT_PUBLIC_SITE_URL in Vercel once you have a domain (no trailing slash).
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://toolhive.vercel.app").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://qrhoney.com").replace(/\/$/, ""),
   contactEmail: "hello@example.com",
 };
 

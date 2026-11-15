@@ -22,7 +22,7 @@ export default function DesignPanel({ design, set, ui, compact = false }: { desi
   const fileRef = useRef<HTMLInputElement>(null);
 
   const thumbs = useMemo(
-    () => TEMPLATES.map((t) => ({ id: t.id, d: t.d, src: svgToDataUrl(renderSvg("https://toolhive.app", { ...DEFAULT_DESIGN, ...t.d, frameText: "SCAN ME", margin: 2 }).svg) })),
+    () => TEMPLATES.map((t) => ({ id: t.id, d: t.d, src: svgToDataUrl(renderSvg("https://qrhoney.com", { ...DEFAULT_DESIGN, ...t.d, frameText: "SCAN ME", margin: 2 }).svg) })),
     [],
   );
   const frameThumbs = useMemo(

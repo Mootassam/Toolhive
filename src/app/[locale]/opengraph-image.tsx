@@ -17,7 +17,7 @@ export default function OG() {
     (
       <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", background: "linear-gradient(135deg,#eef4ff 0%,#ffffff 55%,#e0f7ff 100%)", padding: 80, fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-          <div style={{ fontSize: 34, fontWeight: 800, color: "#2543f0" }}>{SITE.name}</div>
+          <div style={{ fontSize: 34, fontWeight: 800, color: "#b45309" }}>{SITE.name}</div>
           <div style={{ fontSize: 72, fontWeight: 900, color: "#0f172a", lineHeight: 1.05, marginTop: 18 }}>Free QR Code Generator</div>
           <div style={{ fontSize: 32, color: "#475569", marginTop: 24 }}>Logo · Colors · Frames · SVG & PDF · Bulk</div>
           <div style={{ display: "flex", marginTop: 36, fontSize: 28, fontWeight: 700, color: "#047857" }}>No sign-up · No watermark · Never expires</div>
