@@ -105,8 +105,11 @@ function shapeFor(style: EyeFrameStyle | EyeBallStyle, x: number, y: number, s: 
       return rrect(x, y, s, s, [s * 0.4, s * 0.4, s * 0.4, s * 0.4]);
     case "circle":
       return circle(x + s / 2, y + s / 2, s / 2);
-    case "diamond":
-      return diamond(x + s / 2, y + s / 2, s / 2 * 1.15);
+    case "diamond": {
+      // beveled square (octagon): a sharp diamond breaks the finder-pattern ratio scanners rely on
+      const b = s * 0.18;
+      return `M${x + b},${y}H${x + s - b}L${x + s},${y + b}V${y + s - b}L${x + s - b},${y + s}H${x + b}L${x},${y + s - b}V${y + b}Z`;
+    }
     case "leaf": {
       const R = s * 0.5;
       const r: Radii = corner === 0 ? [R, 0, R, 0] : [0, R, 0, R];
@@ -294,12 +297,12 @@ export function renderSvg(data: string, d: Design): Rendered {
       break;
     }
     case "border": {
-      const sw = Q * 0.03;
-      W = Q + sw * 2 + pad * 2;
+      const sw = Q * 0.025, bp = Q * 0.09;
+      W = Q + sw * 2 + bp * 2;
       H = W + bar * 0.9;
       body =
         `<path d="${rrect(sw / 2, sw / 2, W - sw, W - sw, [rad, rad, rad, rad])}" fill="${bgCard}" stroke="${d.frameColor}" stroke-width="${sw}"/>` +
-        `<g transform="translate(${sw + pad},${sw + pad})">${qrInner}</g>` +
+        `<g transform="translate(${sw + bp},${sw + bp})">${qrInner}</g>` +
         (text ? `<text x="${W / 2}" y="${W + bar * 0.45}" font-size="${fontFor(W, bar)}" fill="${d.frameColor}" ${font}>${text}</text>` : "");
       break;
     }

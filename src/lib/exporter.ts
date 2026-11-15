@@ -38,26 +38,35 @@ export function downloadBlob(blob: Blob, name: string) {
   setTimeout(() => URL.revokeObjectURL(url), 4000);
 }
 
+/**
+ * Decodes a QR code from any image. Phone cameras see a slightly soft image, which merges
+ * dot / diamond / line styles into solid modules; jsQR sees pixel-perfect images, so after a
+ * plain attempt we also try a few camera-like blurs and sizes.
+ */
+export function decodeImage(src: CanvasImageSource, w: number, h: number, quick = false): string | null {
+  const plans: [number, number][] = quick ? [[900, 0], [520, 3]] : [[1000, 0], [520, 0], [520, 3], [520, 5], [520, 7], [360, 3]];
+  for (const [max, blur] of plans) {
+    const k = Math.min(1, max / Math.max(w, h));
+    const c = document.createElement("canvas");
+    c.width = Math.max(1, Math.round(w * k));
+    c.height = Math.max(1, Math.round(h * k));
+    const ctx = c.getContext("2d", { willReadFrequently: true })!;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, c.width, c.height);
+    if (blur) ctx.filter = `blur(${blur}px)`;
+    ctx.drawImage(src, 0, 0, c.width, c.height);
+    const img = ctx.getImageData(0, 0, c.width, c.height);
+    const res = jsQR(img.data, img.width, img.height, { inversionAttempts: "attemptBoth" });
+    if (res?.data) return res.data;
+  }
+  return null;
+}
+
 /** Renders the code and decodes it again to prove it scans. */
 export async function verifyScan(r: Rendered, expected: string): Promise<boolean> {
   try {
-    // Phone cameras see a slightly soft image, which merges dot / diamond / line styles into
-    // solid modules. jsQR sees pixel-perfect images, so we also try a few camera-like blurs.
     const base = await rasterize(r, 520, "#ffffff");
-    for (const blur of [0, 3, 5, 7]) {
-      const c = document.createElement("canvas");
-      c.width = base.width;
-      c.height = base.height;
-      const ctx = c.getContext("2d", { willReadFrequently: true })!;
-      ctx.fillStyle = "#ffffff";
-      ctx.fillRect(0, 0, c.width, c.height);
-      if (blur) ctx.filter = `blur(${blur}px)`;
-      ctx.drawImage(base, 0, 0);
-      const img = ctx.getImageData(0, 0, c.width, c.height);
-      const res = jsQR(img.data, img.width, img.height, { inversionAttempts: "attemptBoth" });
-      if (res && res.data === expected) return true;
-    }
-    return false;
+    return decodeImage(base, base.width, base.height) === expected;
   } catch {
     return false;
   }

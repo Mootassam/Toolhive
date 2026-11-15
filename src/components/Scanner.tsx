@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import jsQR from "jsqr";
 import Icon from "./Icon";
 import type { Dict } from "@/lib/i18n";
-import { safeLS, setLS } from "@/lib/exporter";
+import { safeLS, setLS, decodeImage } from "@/lib/exporter";
 
 const LS_HIST = "th.scans.v1";
 interface Hit { t: string; at: number }
@@ -21,7 +20,6 @@ function parseWifi(s: string) {
 export default function Scanner({ dict, locale }: { dict: Dict; locale: string }) {
   const t = dict.scanner;
   const videoRef = useRef<HTMLVideoElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const rafRef = useRef(0);
   const [on, setOn] = useState(false);
@@ -53,17 +51,6 @@ export default function Scanner({ dict, locale }: { dict: Dict; locale: string }
 
   useEffect(() => stop, [stop]);
 
-  const decodeFrom = (src: CanvasImageSource, w: number, h: number) => {
-    const c = (canvasRef.current ||= document.createElement("canvas"));
-    const k = Math.min(1, 1000 / Math.max(w, h));
-    c.width = Math.round(w * k);
-    c.height = Math.round(h * k);
-    const ctx = c.getContext("2d", { willReadFrequently: true })!;
-    ctx.drawImage(src, 0, 0, c.width, c.height);
-    const img = ctx.getImageData(0, 0, c.width, c.height);
-    return jsQR(img.data, img.width, img.height, { inversionAttempts: "attemptBoth" });
-  };
-
   const start = async () => {
     setErr(null);
     setResult(null);
@@ -77,11 +64,11 @@ export default function Scanner({ dict, locale }: { dict: Dict; locale: string }
       let last = 0;
       const tick = (ts: number) => {
         if (!streamRef.current) return;
-        if (ts - last > 120 && v.videoWidth) {
+        if (ts - last > 180 && v.videoWidth) {
           last = ts;
-          const r = decodeFrom(v, v.videoWidth, v.videoHeight);
-          if (r?.data) {
-            found(r.data);
+          const r = decodeImage(v, v.videoWidth, v.videoHeight, true);
+          if (r) {
+            found(r);
             stop();
             return;
           }
@@ -99,9 +86,9 @@ export default function Scanner({ dict, locale }: { dict: Dict; locale: string }
     const url = URL.createObjectURL(file);
     const img = new Image();
     img.onload = () => {
-      const r = decodeFrom(img, img.naturalWidth, img.naturalHeight);
+      const r = decodeImage(img, img.naturalWidth, img.naturalHeight);
       URL.revokeObjectURL(url);
-      if (r?.data) found(r.data);
+      if (r) found(r);
       else {
         setResult(null);
         setErr(t.notFound);
