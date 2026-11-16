@@ -1,5 +1,5 @@
 const en = {
-  nav: { generator: "QR Generator", scanner: "QR Scanner", bulk: "Bulk QR", barcode: "Barcode", types: "QR Types", language: "Language", theme: "Theme" },
+  nav: { generator: "QR Generator", scanner: "QR Scanner", bulk: "Bulk QR", barcode: "Barcode", tools: "All tools", types: "QR Types", language: "Language", theme: "Theme" },
   home: {
     title: "Free QR Code Generator with Logo — No Sign-up, Never Expires",
     meta: "Create custom QR codes free: logo, colors, gradients, frames, SVG & PDF export, WiFi, vCard, WhatsApp, UPI and more. No sign-up, no watermark, codes never expire.",
@@ -184,6 +184,303 @@ const en = {
         "a": "Use dark bars on a light background, don't print it too small and keep the white margin around it. EAN and UPC need a correct check digit — enter 12 digits for EAN-13 and we calculate it for you."
       }
     ]
+  },
+  tools: {
+    "hubTitle": "Free Online Tools — Image, PDF, QR Code & Barcode",
+    "hubMeta": "Free online tools that work in your browser: compress and resize images, HEIC to JPG, JPG to PDF, merge and split PDF, QR codes and barcodes. No sign-up, no upload.",
+    "hubH1": "All free tools",
+    "hubSub": "Images, PDFs, QR codes and barcodes — fast, free and private. Your files never leave your device.",
+    "badge": "100% free · No sign-up · Files never leave your device",
+    "more": "More free tools",
+    "groups": {
+      "qr": "QR code & barcode",
+      "image": "Image tools",
+      "pdf": "PDF tools"
+    },
+    "ui": {
+      "chooseFiles": "Choose files",
+      "chooseFile": "Choose a file",
+      "dropHint": "or drag & drop them here — you can also paste with Ctrl+V",
+      "wrongType": "Some files were skipped because this tool doesn't support them.",
+      "files": "{n} files",
+      "pages": "{n} pages",
+      "clear": "Clear all",
+      "remove": "Remove",
+      "download": "Download",
+      "downloadAll": "Download all (ZIP)",
+      "settings": "Settings",
+      "working": "Working {i} of {n}…",
+      "done": "Done!",
+      "kept": "Already optimized — original kept",
+      "error": "Couldn't read this file.",
+      "noWebp": "Your browser can’t create WebP files. Please try Chrome, Edge or Firefox.",
+      "encrypted": "This PDF is password-protected or damaged.",
+      "bySize": "By size",
+      "byPercent": "By percentage",
+      "width": "Width",
+      "height": "Height",
+      "keepRatio": "Keep aspect ratio",
+      "percent": "Size",
+      "maxWidth": "Max width",
+      "original": "Original",
+      "format": "Output format",
+      "auto": "Auto",
+      "sameFormat": "Same",
+      "quality": "Quality",
+      "background": "Background",
+      "pageSize": "Page size",
+      "fitImage": "Fit image",
+      "margin": "Margin",
+      "none": "None",
+      "small": "Small",
+      "large": "Large",
+      "resolution": "Image quality",
+      "normal": "Normal",
+      "high": "High",
+      "veryHigh": "Very high",
+      "splitEach": "Every page",
+      "extract": "Choose pages",
+      "pagesOptional": "Pages (empty = all)",
+      "pagesToExtract": "Pages to extract",
+      "rangesHint": "Example: 1-3, 5, 8-10",
+      "addOneMore": "Add at least 2 PDF files to merge.",
+      "noPages": "No pages match — check the page numbers.",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "privacy": "Your files are processed on your device and never uploaded."
+    },
+    "faqCommon": [
+      {
+        "q": "Is it really free?",
+        "a": "Yes. Every tool is free with no sign-up, no watermark and no daily limit."
+      },
+      {
+        "q": "Are my files safe?",
+        "a": "Your files never leave your device. Everything is processed inside your browser, so nothing is uploaded to a server."
+      }
+    ],
+    "items": {
+      "compressImage": {
+        "name": "Compress Image",
+        "desc": "Make JPG, PNG and WebP files smaller without visible quality loss.",
+        "title": "Compress Image Online Free — Reduce JPG, PNG & WebP Size",
+        "meta": "Compress images online for free. Reduce JPG, PNG, WebP and HEIC file size in seconds without losing quality. Batch compress, no sign-up, no upload.",
+        "h1": "Compress images for free",
+        "sub": "Reduce photo file size for websites, email and WhatsApp. Batch compress many images at once — nothing is uploaded.",
+        "action": "Compress images",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "How much smaller will my images get?",
+            "a": "Usually 50–80% smaller for photos at quality 70, with no difference you can see. Lower the quality or set a max width to make them even smaller."
+          },
+          {
+            "q": "Can I compress PNG files?",
+            "a": "Yes. In Auto mode we try PNG and a modern format and keep the smallest one. Transparent images stay transparent."
+          }
+        ]
+      },
+      "resizeImage": {
+        "name": "Resize Image",
+        "desc": "Change image width and height in pixels or by percentage.",
+        "title": "Resize Image Online Free — Change Size in Pixels or Percent",
+        "meta": "Resize images online for free. Change JPG, PNG and WebP width and height in pixels or percent, keep the aspect ratio, batch resize. No sign-up, no upload.",
+        "h1": "Resize images for free",
+        "sub": "Set an exact size in pixels or scale by percentage. Resize many images at once for social media, websites and forms.",
+        "action": "Resize images",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "How do I resize without stretching?",
+            "a": "Keep \"Keep aspect ratio\" on and enter only the width or the height — the other side is calculated for you."
+          },
+          {
+            "q": "Can I resize many images at once?",
+            "a": "Yes. Add as many images as you want; they all get the same settings and you can download them as one ZIP."
+          }
+        ]
+      },
+      "heicToJpg": {
+        "name": "HEIC to JPG",
+        "desc": "Convert iPhone HEIC photos to JPG that open everywhere.",
+        "title": "HEIC to JPG Converter Free — Convert iPhone Photos Online",
+        "meta": "Convert HEIC to JPG online for free. Turn iPhone HEIC and HEIF photos into JPG that open on Windows, Android and every website. Batch convert, no upload.",
+        "h1": "Convert HEIC to JPG for free",
+        "sub": "iPhone photos in HEIC format don't open everywhere. Convert them to JPG in seconds — many at once, right on your device.",
+        "action": "Convert to JPG",
+        "accepts": "HEIC · HEIF",
+        "faq": [
+          {
+            "q": "What is a HEIC file?",
+            "a": "HEIC is the photo format iPhones use by default. It saves space but many Windows PCs, Android phones and websites can't open it — JPG works everywhere."
+          },
+          {
+            "q": "Do I lose quality converting HEIC to JPG?",
+            "a": "At quality 90 or higher the difference is invisible. You can set quality to 100 for the best result."
+          }
+        ]
+      },
+      "pngToJpg": {
+        "name": "PNG to JPG",
+        "desc": "Convert PNG images to smaller JPG files.",
+        "title": "PNG to JPG Converter Free — Convert PNG to JPEG Online",
+        "meta": "Convert PNG to JPG online for free. Make PNG images smaller as JPEG, choose quality and background color. Batch convert, no sign-up, no upload.",
+        "h1": "Convert PNG to JPG for free",
+        "sub": "JPG files are much smaller than PNG for photos. Choose the quality and the background color for transparent areas.",
+        "action": "Convert to JPG",
+        "accepts": "PNG",
+        "faq": [
+          {
+            "q": "What happens to transparent areas?",
+            "a": "JPG doesn't support transparency, so transparent areas are filled with the background color you pick (white by default)."
+          },
+          {
+            "q": "Why convert PNG to JPG?",
+            "a": "For photos, JPG files are often 5–10 times smaller than PNG, which makes them faster to upload, send and load on websites."
+          }
+        ]
+      },
+      "webpToJpg": {
+        "name": "WebP to JPG",
+        "desc": "Convert WebP images to JPG that open in any app.",
+        "title": "WebP to JPG Converter Free — Convert WebP Images Online",
+        "meta": "Convert WebP to JPG online for free. Turn WebP images saved from websites into JPG files that open in every app. Batch convert, no sign-up, no upload.",
+        "h1": "Convert WebP to JPG for free",
+        "sub": "Saved an image from a website and it's WebP? Convert it to JPG so it opens in every app and editor.",
+        "action": "Convert to JPG",
+        "accepts": "WebP",
+        "faq": [
+          {
+            "q": "Why are images from websites saved as WebP?",
+            "a": "Many websites use WebP because it loads fast. But some apps, printers and older programs can't open it, so JPG is safer for sharing."
+          },
+          {
+            "q": "Can I convert many WebP files at once?",
+            "a": "Yes. Add all your WebP images and download the JPG files one by one or together in a ZIP."
+          }
+        ]
+      },
+      "jpgToPng": {
+        "name": "JPG to PNG",
+        "desc": "Convert JPG photos to lossless PNG images.",
+        "title": "JPG to PNG Converter Free — Convert JPEG to PNG Online",
+        "meta": "Convert JPG to PNG online for free. Turn JPEG photos into lossless PNG images in seconds. Batch convert, no sign-up, no upload, no watermark.",
+        "h1": "Convert JPG to PNG for free",
+        "sub": "Turn JPEG photos into lossless PNG files — ideal for editing, design tools and uploads that require PNG.",
+        "action": "Convert to PNG",
+        "accepts": "JPG · JPEG",
+        "faq": [
+          {
+            "q": "Will the PNG have a transparent background?",
+            "a": "No — a JPG has no transparency, so the PNG keeps the same background. Converting only changes the file format."
+          },
+          {
+            "q": "Why is the PNG bigger than my JPG?",
+            "a": "PNG is lossless, so it stores every pixel exactly. That's great for editing, but files are larger than JPG."
+          }
+        ]
+      },
+      "jpgToWebp": {
+        "name": "Convert to WebP",
+        "desc": "Convert JPG and PNG images to light WebP files for websites.",
+        "title": "JPG to WebP Converter Free — Convert Images to WebP Online",
+        "meta": "Convert JPG and PNG to WebP online for free. Make images up to 30% smaller for faster websites and better SEO. Batch convert, no sign-up, no upload.",
+        "h1": "Convert images to WebP for free",
+        "sub": "WebP images are smaller than JPG and PNG at the same quality — perfect for fast websites and online stores.",
+        "action": "Convert to WebP",
+        "accepts": "JPG · PNG · HEIC",
+        "faq": [
+          {
+            "q": "Why use WebP on my website?",
+            "a": "WebP files are usually 25–35% smaller than JPG at the same quality, so pages load faster — which helps visitors and Google rankings."
+          },
+          {
+            "q": "Does WebP keep transparency?",
+            "a": "Yes. Transparent PNG images stay transparent when converted to WebP."
+          }
+        ]
+      },
+      "jpgToPdf": {
+        "name": "JPG to PDF",
+        "desc": "Turn photos and scans into one PDF document.",
+        "title": "JPG to PDF Converter Free — Convert Images to PDF Online",
+        "meta": "Convert JPG, PNG and HEIC images to PDF online for free. Combine many photos into one PDF, choose A4 or Letter and margins. No sign-up, no upload, no watermark.",
+        "h1": "Convert JPG to PDF for free",
+        "sub": "Combine photos, scans and screenshots into one PDF. Change the order, pick the page size and download instantly.",
+        "action": "Create PDF",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Can I put many images in one PDF?",
+            "a": "Yes. Add all your images, use the arrows to change the order, and each image becomes one page of the PDF."
+          },
+          {
+            "q": "Which page size should I choose?",
+            "a": "A4 is standard in most countries and Letter in the USA and Canada. \"Fit image\" makes each page exactly the size of its photo."
+          }
+        ]
+      },
+      "mergePdf": {
+        "name": "Merge PDF",
+        "desc": "Combine several PDF files into one, in any order.",
+        "title": "Merge PDF Free — Combine PDF Files Online in Seconds",
+        "meta": "Merge PDF files online for free. Combine multiple PDFs into one document in the order you want. No sign-up, no upload, no watermark, no file limit.",
+        "h1": "Merge PDF files for free",
+        "sub": "Combine contracts, invoices and documents into one PDF. Drag in your files, set the order and download.",
+        "action": "Merge PDF",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "How do I change the order of the PDFs?",
+            "a": "Use the up and down arrows next to each file. The pages are merged from top to bottom."
+          },
+          {
+            "q": "Is there a limit on the number of files?",
+            "a": "No fixed limit. Very large files depend on your device's memory, but dozens of normal PDFs work fine."
+          }
+        ]
+      },
+      "pdfToJpg": {
+        "name": "PDF to JPG",
+        "desc": "Turn every PDF page into a high-quality image.",
+        "title": "PDF to JPG Converter Free — Convert PDF Pages to Images Online",
+        "meta": "Convert PDF to JPG or PNG online for free. Turn every page into a high-quality image, choose pages and resolution, download as ZIP. No sign-up, no upload.",
+        "h1": "Convert PDF to JPG for free",
+        "sub": "Save PDF pages as JPG or PNG images — all pages or only the ones you choose, in high resolution.",
+        "action": "Convert to images",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Can I convert only some pages?",
+            "a": "Yes. Type the pages you want, for example 1-3, 5. Leave it empty to convert all pages."
+          },
+          {
+            "q": "Which quality should I choose?",
+            "a": "\"High\" is sharp enough for most uses. Choose \"Very high\" for printing or small text; files will be larger."
+          }
+        ]
+      },
+      "splitPdf": {
+        "name": "Split PDF",
+        "desc": "Extract pages or split a PDF into separate files.",
+        "title": "Split PDF Free — Extract Pages from PDF Online",
+        "meta": "Split PDF online for free. Extract the pages you need into a new PDF or split every page into its own file. No sign-up, no upload, no watermark.",
+        "h1": "Split PDF for free",
+        "sub": "Pull out the pages you need, or split a PDF into one file per page. Fast, free and private.",
+        "action": "Split PDF",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "How do I extract specific pages?",
+            "a": "Choose \"Choose pages\" and type the pages you want, like 1-3, 5. They are saved into one new PDF in that order."
+          },
+          {
+            "q": "Does splitting change the quality?",
+            "a": "No. Pages are copied exactly as they are — text, images and links stay the same."
+          }
+        ]
+      }
+    }
   },
   footer: { tagline: "Free online tools that respect your privacy.", privacy: "Privacy", terms: "Terms", rights: "All rights reserved.", madeFree: "Free forever. No sign-up." },
 };

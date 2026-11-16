@@ -37,6 +37,16 @@ const P: Record<string, string> = {
   trash: "M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15",
   chevron: "m6 9 6 6 6-6",
   zip: "M6 2h9l5 5v15H6V2Zm4 0v2m0 2v2m0 2v2m-1 2h2v3H9z",
+  compress: "M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7",
+  resize: "M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7",
+  convert: "M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5",
+  pdf: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 0v6h6M8 13h2a1.5 1.5 0 0 1 0 3H8v-5m6 5v-5h1.5a2.5 2.5 0 0 1 0 5H14",
+  merge: "M8 3v5a4 4 0 0 0 4 4 4 4 0 0 1 4 4v5M16 3v5a4 4 0 0 1-4 4M5 18l3 3 3-3",
+  split: "M16 3h5v5M8 3H3v5M21 3l-9 9-9-9M12 12v9",
+  arrowUp: "M12 19V5m-6 6 6-6 6 6",
+  arrowDown: "M12 5v14m-6-6 6 6 6-6",
+  x: "M18 6 6 18M6 6l12 12",
+  tools: "M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z",
 };
 
 export default function Icon({ name, className = "h-5 w-5", strokeWidth = 2 }: { name: string; className?: string; strokeWidth?: number }) {

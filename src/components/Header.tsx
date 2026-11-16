@@ -30,22 +30,24 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
           <Logo />
           <span>{SITE.name}</span>
         </Link>
-        <nav className="ms-4 hidden items-center gap-1 md:flex">
+        <nav className="ms-4 hidden items-center gap-1 lg:flex">
           <Link href={`/${locale}`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.generator}</Link>
           <Link href={`/${locale}/qr-code-scanner`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.scanner}</Link>
           <Link href={`/${locale}/bulk-qr-code-generator`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.bulk}</Link>
           <Link href={`/${locale}/barcode-generator`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.barcode}</Link>
+          <Link href={`/${locale}/tools`} className="flex items-center gap-1.5 rounded-lg bg-brand-50 px-3 py-2 text-sm font-bold text-brand-700 hover:bg-brand-100 dark:bg-brand-950/60 dark:text-brand-300"><Icon name="tools" className="h-4 w-4" />{n.tools}</Link>
         </nav>
         <div className="ms-auto flex items-center gap-2">
           <LangSwitch locale={locale} label={n.language} />
           <ThemeToggle label={n.theme} />
         </div>
       </div>
-      <nav className="no-scrollbar flex gap-1 overflow-x-auto border-t border-slate-100 px-3 py-1.5 md:hidden dark:border-slate-800">
+      <nav className="no-scrollbar flex gap-1 overflow-x-auto border-t border-slate-100 px-3 py-1.5 lg:hidden dark:border-slate-800">
         <Link href={`/${locale}`} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold">{n.generator}</Link>
         <Link href={`/${locale}/qr-code-scanner`} className="flex shrink-0 items-center gap-1 rounded-lg px-3 py-1.5 text-sm font-semibold"><Icon name="camera" className="h-4 w-4" />{n.scanner}</Link>
         <Link href={`/${locale}/bulk-qr-code-generator`} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold">{n.bulk}</Link>
         <Link href={`/${locale}/barcode-generator`} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold">{n.barcode}</Link>
+        <Link href={`/${locale}/tools`} className="flex shrink-0 items-center gap-1 rounded-lg bg-brand-50 px-3 py-1.5 text-sm font-bold text-brand-700 dark:bg-brand-950/60 dark:text-brand-300"><Icon name="tools" className="h-4 w-4" />{n.tools}</Link>
       </nav>
     </header>
   );

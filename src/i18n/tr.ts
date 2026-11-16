@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const tr: Dict = {
-  nav: { generator: "QR Oluşturucu", scanner: "QR Okuyucu", bulk: "Toplu QR", barcode: "Barkod", types: "QR Türleri", language: "Dil", theme: "Tema" },
+  nav: { generator: "QR Oluşturucu", scanner: "QR Okuyucu", bulk: "Toplu QR", barcode: "Barkod", tools: "Tüm araçlar", types: "QR Türleri", language: "Dil", theme: "Tema" },
   home: {
     title: "Logolu Ücretsiz QR Kod Oluşturucu — Üyelik Yok, Süresi Asla Dolmaz",
     meta: "Ücretsiz özel QR kod oluşturun: logo, renkler, gradyanlar, çerçeveler, SVG ve PDF indirme, WiFi, vCard, WhatsApp ve daha fazlası. Üyelik yok, filigran yok, süresi asla dolmaz.",
@@ -186,6 +186,303 @@ const tr: Dict = {
         "a": "Açık zemin üzerine koyu çubuk kullanın, çok küçük basmayın ve çevresinde beyaz boşluk bırakın. EAN ve UPC doğru kontrol hanesi ister — EAN-13 için 12 hane girin, biz hesaplarız."
       }
     ]
+  },
+  tools: {
+    "hubTitle": "Ücretsiz Online Araçlar — Görsel, PDF, QR Kod ve Barkod",
+    "hubMeta": "Tarayıcınızda çalışan ücretsiz online araçlar: görsel sıkıştırma ve boyutlandırma, HEIC'ten JPG'ye, JPG'den PDF'ye, PDF birleştirme ve bölme, QR kod ve barkod. Üyelik yok, yükleme yok.",
+    "hubH1": "Tüm ücretsiz araçlar",
+    "hubSub": "Görseller, PDF'ler, QR kodlar ve barkodlar — hızlı, ücretsiz ve gizli. Dosyalarınız cihazınızdan asla çıkmaz.",
+    "badge": "%100 ücretsiz · Üyelik yok · Dosyalar cihazınızda kalır",
+    "more": "Diğer ücretsiz araçlar",
+    "groups": {
+      "qr": "QR kod ve barkod",
+      "image": "Görsel araçları",
+      "pdf": "PDF araçları"
+    },
+    "ui": {
+      "chooseFiles": "Dosya seç",
+      "chooseFile": "Bir dosya seç",
+      "dropHint": "veya buraya sürükleyip bırakın — Ctrl+V ile yapıştırabilirsiniz",
+      "wrongType": "Bazı dosyalar bu araç desteklemediği için atlandı.",
+      "files": "{n} dosya",
+      "pages": "{n} sayfa",
+      "clear": "Tümünü temizle",
+      "remove": "Kaldır",
+      "download": "İndir",
+      "downloadAll": "Tümünü indir (ZIP)",
+      "settings": "Ayarlar",
+      "working": "{n} dosyadan {i}. işleniyor…",
+      "done": "Bitti!",
+      "kept": "Zaten optimize — orijinal korundu",
+      "error": "Bu dosya okunamadı.",
+      "noWebp": "Tarayıcınız WebP dosyası oluşturamıyor. Lütfen Chrome, Edge veya Firefox deneyin.",
+      "encrypted": "Bu PDF şifreli veya bozuk.",
+      "bySize": "Boyuta göre",
+      "byPercent": "Yüzdeye göre",
+      "width": "Genişlik",
+      "height": "Yükseklik",
+      "keepRatio": "En-boy oranını koru",
+      "percent": "Boyut",
+      "maxWidth": "Maks. genişlik",
+      "original": "Orijinal",
+      "format": "Çıktı formatı",
+      "auto": "Otomatik",
+      "sameFormat": "Aynı",
+      "quality": "Kalite",
+      "background": "Arka plan",
+      "pageSize": "Sayfa boyutu",
+      "fitImage": "Görsele göre",
+      "margin": "Kenar boşluğu",
+      "none": "Yok",
+      "small": "Küçük",
+      "large": "Büyük",
+      "resolution": "Görsel kalitesi",
+      "normal": "Normal",
+      "high": "Yüksek",
+      "veryHigh": "Çok yüksek",
+      "splitEach": "Her sayfa",
+      "extract": "Sayfa seç",
+      "pagesOptional": "Sayfalar (boş = tümü)",
+      "pagesToExtract": "Çıkarılacak sayfalar",
+      "rangesHint": "Örnek: 1-3, 5, 8-10",
+      "addOneMore": "Birleştirmek için en az 2 PDF dosyası ekleyin.",
+      "noPages": "Eşleşen sayfa yok — sayfa numaralarını kontrol edin.",
+      "moveUp": "Yukarı taşı",
+      "moveDown": "Aşağı taşı",
+      "privacy": "Dosyalarınız cihazınızda işlenir ve asla yüklenmez."
+    },
+    "faqCommon": [
+      {
+        "q": "Gerçekten ücretsiz mi?",
+        "a": "Evet. Tüm araçlar ücretsiz; üyelik, filigran ve günlük sınır yok."
+      },
+      {
+        "q": "Dosyalarım güvende mi?",
+        "a": "Dosyalarınız cihazınızdan asla çıkmaz. Her şey tarayıcınızda işlenir, hiçbir şey sunucuya yüklenmez."
+      }
+    ],
+    "items": {
+      "compressImage": {
+        "name": "Görsel sıkıştır",
+        "desc": "JPG, PNG ve WebP boyutunu görünür kalite kaybı olmadan küçültün.",
+        "title": "Görsel Sıkıştırma Online Ücretsiz — JPG, PNG ve WebP Boyutunu Küçült",
+        "meta": "Görselleri online ücretsiz sıkıştırın. JPG, PNG, WebP ve HEIC dosya boyutunu saniyeler içinde kalite kaybı olmadan küçültün. Toplu sıkıştırma, üyelik yok, yükleme yok.",
+        "h1": "Ücretsiz görsel sıkıştırma",
+        "sub": "Web siteleri, e-posta ve WhatsApp için fotoğraf boyutunu küçültün. Birçok görseli aynı anda sıkıştırın — hiçbir şey yüklenmez.",
+        "action": "Görselleri sıkıştır",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Görsellerim ne kadar küçülür?",
+            "a": "Kalite 70'te fotoğraflar genelde %50–80 küçülür ve fark görülmez. Daha da küçültmek için kaliteyi düşürün veya maks. genişlik belirleyin."
+          },
+          {
+            "q": "PNG dosyalarını sıkıştırabilir miyim?",
+            "a": "Evet. Otomatik modda PNG ve modern bir format denenir, en küçüğü seçilir. Şeffaf görseller şeffaf kalır."
+          }
+        ]
+      },
+      "resizeImage": {
+        "name": "Görsel boyutlandır",
+        "desc": "Genişlik ve yüksekliği piksel veya yüzde ile değiştirin.",
+        "title": "Görsel Boyutlandırma Online Ücretsiz — Piksel veya Yüzde ile",
+        "meta": "Görselleri online ücretsiz boyutlandırın. JPG, PNG ve WebP genişlik ve yüksekliğini piksel veya yüzde ile değiştirin, oranı koruyun, toplu işlem yapın. Üyelik yok, yükleme yok.",
+        "h1": "Ücretsiz görsel boyutlandırma",
+        "sub": "Piksel olarak tam boyut verin veya yüzde ile ölçekleyin. Sosyal medya, web siteleri ve formlar için birçok görseli birden boyutlandırın.",
+        "action": "Boyutlandır",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Görseli bozmadan nasıl boyutlandırırım?",
+            "a": "\"En-boy oranını koru\" açık kalsın ve sadece genişlik veya yüksekliği girin — diğer kenar otomatik hesaplanır."
+          },
+          {
+            "q": "Birçok görseli aynı anda boyutlandırabilir miyim?",
+            "a": "Evet. İstediğiniz kadar görsel ekleyin; hepsi aynı ayarları alır ve tek bir ZIP olarak indirebilirsiniz."
+          }
+        ]
+      },
+      "heicToJpg": {
+        "name": "HEIC'ten JPG'ye",
+        "desc": "iPhone HEIC fotoğraflarını her yerde açılan JPG'ye çevirin.",
+        "title": "HEIC'ten JPG'ye Dönüştürücü Ücretsiz — iPhone Fotoğraflarını Online Çevir",
+        "meta": "HEIC'i online ücretsiz JPG'ye çevirin. iPhone HEIC ve HEIF fotoğraflarını Windows, Android ve her sitede açılan JPG'ye dönüştürün. Toplu dönüştürme, yükleme yok.",
+        "h1": "Ücretsiz HEIC'ten JPG'ye dönüştürme",
+        "sub": "iPhone'un HEIC fotoğrafları her yerde açılmaz. Saniyeler içinde JPG'ye çevirin — birçoğunu birden, doğrudan cihazınızda.",
+        "action": "JPG'ye çevir",
+        "accepts": "HEIC · HEIF",
+        "faq": [
+          {
+            "q": "HEIC dosyası nedir?",
+            "a": "HEIC, iPhone'ların varsayılan fotoğraf formatıdır. Yer kazandırır ama birçok Windows bilgisayar, Android telefon ve site açamaz — JPG her yerde çalışır."
+          },
+          {
+            "q": "HEIC'ten JPG'ye çevirince kalite düşer mi?",
+            "a": "Kalite 90 ve üzerinde fark görünmez. En iyi sonuç için 100 seçebilirsiniz."
+          }
+        ]
+      },
+      "pngToJpg": {
+        "name": "PNG'den JPG'ye",
+        "desc": "PNG görselleri daha küçük JPG dosyalarına çevirin.",
+        "title": "PNG'den JPG'ye Dönüştürücü Ücretsiz — PNG'yi JPEG'e Online Çevir",
+        "meta": "PNG'yi online ücretsiz JPG'ye çevirin. PNG görselleri JPEG olarak küçültün, kaliteyi ve arka plan rengini seçin. Toplu dönüştürme, üyelik yok, yükleme yok.",
+        "h1": "Ücretsiz PNG'den JPG'ye dönüştürme",
+        "sub": "Fotoğraflarda JPG dosyaları PNG'den çok daha küçüktür. Şeffaf alanlar için kaliteyi ve arka plan rengini seçin.",
+        "action": "JPG'ye çevir",
+        "accepts": "PNG",
+        "faq": [
+          {
+            "q": "Şeffaf alanlara ne olur?",
+            "a": "JPG şeffaflığı desteklemez; bu alanlar seçtiğiniz arka plan rengiyle doldurulur (varsayılan beyaz)."
+          },
+          {
+            "q": "PNG'yi neden JPG'ye çevirmeliyim?",
+            "a": "Fotoğraflarda JPG çoğu zaman PNG'den 5–10 kat küçüktür; yüklemesi, göndermesi ve sitede açılması daha hızlıdır."
+          }
+        ]
+      },
+      "webpToJpg": {
+        "name": "WebP'den JPG'ye",
+        "desc": "WebP görselleri her uygulamada açılan JPG'ye çevirin.",
+        "title": "WebP'den JPG'ye Dönüştürücü Ücretsiz — WebP Görselleri Online Çevir",
+        "meta": "WebP'yi online ücretsiz JPG'ye çevirin. Sitelerden kaydedilen WebP görselleri her uygulamada açılan JPG'ye dönüştürün. Toplu dönüştürme, üyelik yok, yükleme yok.",
+        "h1": "Ücretsiz WebP'den JPG'ye dönüştürme",
+        "sub": "Bir siteden görsel kaydettiniz ve WebP mi çıktı? Her uygulamada ve editörde açılması için JPG'ye çevirin.",
+        "action": "JPG'ye çevir",
+        "accepts": "WebP",
+        "faq": [
+          {
+            "q": "Sitelerdeki görseller neden WebP olarak kaydediliyor?",
+            "a": "Birçok site hızlı yüklendiği için WebP kullanır. Ama bazı uygulamalar, yazıcılar ve eski programlar açamaz; paylaşmak için JPG daha güvenlidir."
+          },
+          {
+            "q": "Birçok WebP'yi aynı anda çevirebilir miyim?",
+            "a": "Evet. Tüm WebP görselleri ekleyin, JPG'leri tek tek veya bir ZIP içinde indirin."
+          }
+        ]
+      },
+      "jpgToPng": {
+        "name": "JPG'den PNG'ye",
+        "desc": "JPG fotoğrafları kayıpsız PNG görsellere çevirin.",
+        "title": "JPG'den PNG'ye Dönüştürücü Ücretsiz — JPEG'i PNG'ye Online Çevir",
+        "meta": "JPG'yi online ücretsiz PNG'ye çevirin. JPEG fotoğrafları saniyeler içinde kayıpsız PNG görsellere dönüştürün. Toplu dönüştürme, üyelik yok, yükleme yok, filigran yok.",
+        "h1": "Ücretsiz JPG'den PNG'ye dönüştürme",
+        "sub": "JPEG fotoğrafları kayıpsız PNG dosyalarına çevirin — düzenleme, tasarım araçları ve PNG isteyen yüklemeler için ideal.",
+        "action": "PNG'ye çevir",
+        "accepts": "JPG · JPEG",
+        "faq": [
+          {
+            "q": "PNG'nin arka planı şeffaf olur mu?",
+            "a": "Hayır — JPG'de şeffaflık yoktur, PNG aynı arka planı korur. Sadece dosya formatı değişir."
+          },
+          {
+            "q": "PNG neden JPG'mden büyük?",
+            "a": "PNG kayıpsızdır ve her pikseli birebir saklar. Düzenleme için harika ama dosyalar JPG'den büyüktür."
+          }
+        ]
+      },
+      "jpgToWebp": {
+        "name": "WebP'ye çevir",
+        "desc": "JPG ve PNG'yi web siteleri için hafif WebP dosyalarına çevirin.",
+        "title": "JPG'den WebP'ye Dönüştürücü Ücretsiz — Görselleri Online WebP Yap",
+        "meta": "JPG ve PNG'yi online ücretsiz WebP'ye çevirin. Daha hızlı siteler ve daha iyi SEO için %30'a kadar daha küçük görseller. Toplu dönüştürme, üyelik yok, yükleme yok.",
+        "h1": "Görselleri ücretsiz WebP'ye çevirin",
+        "sub": "WebP görseller aynı kalitede JPG ve PNG'den küçüktür — hızlı web siteleri ve online mağazalar için ideal.",
+        "action": "WebP'ye çevir",
+        "accepts": "JPG · PNG · HEIC",
+        "faq": [
+          {
+            "q": "Sitemde neden WebP kullanmalıyım?",
+            "a": "WebP dosyaları aynı kalitede genelde JPG'den %25–35 küçüktür; sayfalar daha hızlı açılır — ziyaretçiler ve Google sıralaması için iyidir."
+          },
+          {
+            "q": "WebP şeffaflığı korur mu?",
+            "a": "Evet. Şeffaf PNG görseller WebP'ye çevrildiğinde de şeffaf kalır."
+          }
+        ]
+      },
+      "jpgToPdf": {
+        "name": "JPG'den PDF'ye",
+        "desc": "Fotoğrafları ve taramaları tek bir PDF belgesine dönüştürün.",
+        "title": "JPG'den PDF'ye Dönüştürücü Ücretsiz — Görselleri Online PDF Yap",
+        "meta": "JPG, PNG ve HEIC görselleri online ücretsiz PDF'ye çevirin. Birçok fotoğrafı tek PDF'de birleştirin, A4 veya Letter ve kenar boşluğu seçin. Üyelik yok, yükleme yok, filigran yok.",
+        "h1": "Ücretsiz JPG'den PDF'ye dönüştürme",
+        "sub": "Fotoğrafları, taramaları ve ekran görüntülerini tek bir PDF'de birleştirin. Sırayı değiştirin, sayfa boyutunu seçin ve hemen indirin.",
+        "action": "PDF oluştur",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Tek PDF'ye birçok görsel koyabilir miyim?",
+            "a": "Evet. Tüm görsellerinizi ekleyin, oklarla sırayı değiştirin; her görsel PDF'nin bir sayfası olur."
+          },
+          {
+            "q": "Hangi sayfa boyutunu seçmeliyim?",
+            "a": "A4 Türkiye'de ve çoğu ülkede standarttır, Letter ise ABD ve Kanada'da. \"Görsele göre\" her sayfayı fotoğrafıyla aynı boyutta yapar."
+          }
+        ]
+      },
+      "mergePdf": {
+        "name": "PDF birleştir",
+        "desc": "Birden çok PDF'yi istediğiniz sırayla tek dosyada birleştirin.",
+        "title": "PDF Birleştirme Ücretsiz — PDF Dosyalarını Online Saniyeler İçinde Birleştir",
+        "meta": "PDF dosyalarını online ücretsiz birleştirin. Birden çok PDF'yi istediğiniz sırayla tek belgede toplayın. Üyelik yok, yükleme yok, filigran yok, sınır yok.",
+        "h1": "Ücretsiz PDF birleştirme",
+        "sub": "Sözleşmeleri, faturaları ve belgeleri tek bir PDF'de birleştirin. Dosyaları ekleyin, sırayı ayarlayın ve indirin.",
+        "action": "PDF birleştir",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "PDF'lerin sırasını nasıl değiştiririm?",
+            "a": "Her dosyanın yanındaki yukarı ve aşağı okları kullanın. Sayfalar yukarıdan aşağıya birleştirilir."
+          },
+          {
+            "q": "Dosya sayısı sınırı var mı?",
+            "a": "Sabit bir sınır yok. Çok büyük dosyalar cihazınızın belleğine bağlıdır, ama onlarca normal PDF sorunsuz çalışır."
+          }
+        ]
+      },
+      "pdfToJpg": {
+        "name": "PDF'den JPG'ye",
+        "desc": "Her PDF sayfasını yüksek kaliteli bir görsele çevirin.",
+        "title": "PDF'den JPG'ye Dönüştürücü Ücretsiz — PDF Sayfalarını Online Görsele Çevir",
+        "meta": "PDF'yi online ücretsiz JPG veya PNG'ye çevirin. Her sayfa yüksek kaliteli görsel olur, sayfaları ve çözünürlüğü seçin, ZIP olarak indirin. Üyelik yok, yükleme yok.",
+        "h1": "Ücretsiz PDF'den JPG'ye dönüştürme",
+        "sub": "PDF sayfalarını JPG veya PNG görsel olarak kaydedin — tüm sayfalar veya sadece seçtikleriniz, yüksek çözünürlükte.",
+        "action": "Görsele çevir",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Sadece bazı sayfaları çevirebilir miyim?",
+            "a": "Evet. İstediğiniz sayfaları yazın, örneğin 1-3, 5. Tüm sayfalar için boş bırakın."
+          },
+          {
+            "q": "Hangi kaliteyi seçmeliyim?",
+            "a": "\"Yüksek\" çoğu kullanım için yeterince nettir. Baskı veya küçük yazılar için \"Çok yüksek\" seçin; dosyalar büyür."
+          }
+        ]
+      },
+      "splitPdf": {
+        "name": "PDF böl",
+        "desc": "Sayfa çıkarın veya PDF'yi ayrı dosyalara bölün.",
+        "title": "PDF Bölme Ücretsiz — PDF'den Online Sayfa Çıkar",
+        "meta": "PDF'yi online ücretsiz bölün. İhtiyacınız olan sayfaları yeni bir PDF'ye çıkarın veya her sayfayı ayrı dosya yapın. Üyelik yok, yükleme yok, filigran yok.",
+        "h1": "Ücretsiz PDF bölme",
+        "sub": "İhtiyacınız olan sayfaları alın veya PDF'yi sayfa başına bir dosyaya bölün. Hızlı, ücretsiz ve gizli.",
+        "action": "PDF böl",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Belirli sayfaları nasıl çıkarırım?",
+            "a": "\"Sayfa seç\"i seçin ve sayfaları yazın, örneğin 1-3, 5. Bu sırayla yeni bir PDF'ye kaydedilir."
+          },
+          {
+            "q": "Bölmek kaliteyi değiştirir mi?",
+            "a": "Hayır. Sayfalar olduğu gibi kopyalanır — metin, görseller ve bağlantılar aynı kalır."
+          }
+        ]
+      }
+    }
   },
   footer: { tagline: "Gizliliğinize saygı duyan ücretsiz online araçlar.", privacy: "Gizlilik", terms: "Koşullar", rights: "Tüm hakları saklıdır.", madeFree: "Sonsuza kadar ücretsiz. Üyelik yok." },
 };

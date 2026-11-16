@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const id: Dict = {
-  nav: { generator: "Pembuat QR", scanner: "Pemindai QR", bulk: "QR Massal", barcode: "Barcode", types: "Jenis QR", language: "Bahasa", theme: "Tema" },
+  nav: { generator: "Pembuat QR", scanner: "Pemindai QR", bulk: "QR Massal", barcode: "Barcode", tools: "Semua alat", types: "Jenis QR", language: "Bahasa", theme: "Tema" },
   home: {
     title: "Pembuat Kode QR Gratis dengan Logo — Tanpa Daftar, Tidak Pernah Kedaluwarsa",
     meta: "Buat kode QR kustom gratis: logo, warna, gradasi, bingkai, ekspor SVG & PDF, WiFi, vCard, WhatsApp, dan lainnya. Tanpa daftar, tanpa watermark, tidak pernah kedaluwarsa.",
@@ -186,6 +186,303 @@ const id: Dict = {
         "a": "Gunakan batang gelap di latar terang, jangan cetak terlalu kecil dan sisakan margin putih di sekelilingnya. EAN dan UPC butuh digit cek yang benar — ketik 12 digit untuk EAN-13 dan kami hitungkan."
       }
     ]
+  },
+  tools: {
+    "hubTitle": "Alat Online Gratis — Gambar, PDF, Kode QR & Barcode",
+    "hubMeta": "Alat online gratis yang berjalan di browser Anda: kompres dan ubah ukuran gambar, HEIC ke JPG, JPG ke PDF, gabung dan pisah PDF, kode QR dan barcode. Tanpa daftar, tanpa upload.",
+    "hubH1": "Semua alat gratis",
+    "hubSub": "Gambar, PDF, kode QR dan barcode — cepat, gratis dan privat. File Anda tidak pernah keluar dari perangkat Anda.",
+    "badge": "100% gratis · Tanpa daftar · File tetap di perangkat Anda",
+    "more": "Alat gratis lainnya",
+    "groups": {
+      "qr": "Kode QR & barcode",
+      "image": "Alat gambar",
+      "pdf": "Alat PDF"
+    },
+    "ui": {
+      "chooseFiles": "Pilih file",
+      "chooseFile": "Pilih satu file",
+      "dropHint": "atau seret ke sini — bisa juga tempel dengan Ctrl+V",
+      "wrongType": "Beberapa file dilewati karena tidak didukung alat ini.",
+      "files": "{n} file",
+      "pages": "{n} halaman",
+      "clear": "Hapus semua",
+      "remove": "Hapus",
+      "download": "Unduh",
+      "downloadAll": "Unduh semua (ZIP)",
+      "settings": "Pengaturan",
+      "working": "Memproses {i} dari {n}…",
+      "done": "Selesai!",
+      "kept": "Sudah optimal — file asli dipertahankan",
+      "error": "File ini tidak bisa dibaca.",
+      "noWebp": "Browser Anda tidak bisa membuat file WebP. Coba Chrome, Edge atau Firefox.",
+      "encrypted": "PDF ini dilindungi kata sandi atau rusak.",
+      "bySize": "Berdasarkan ukuran",
+      "byPercent": "Berdasarkan persen",
+      "width": "Lebar",
+      "height": "Tinggi",
+      "keepRatio": "Pertahankan rasio",
+      "percent": "Ukuran",
+      "maxWidth": "Lebar maks",
+      "original": "Asli",
+      "format": "Format hasil",
+      "auto": "Otomatis",
+      "sameFormat": "Sama",
+      "quality": "Kualitas",
+      "background": "Latar",
+      "pageSize": "Ukuran halaman",
+      "fitImage": "Sesuai gambar",
+      "margin": "Margin",
+      "none": "Tanpa",
+      "small": "Kecil",
+      "large": "Besar",
+      "resolution": "Kualitas gambar",
+      "normal": "Normal",
+      "high": "Tinggi",
+      "veryHigh": "Sangat tinggi",
+      "splitEach": "Setiap halaman",
+      "extract": "Pilih halaman",
+      "pagesOptional": "Halaman (kosong = semua)",
+      "pagesToExtract": "Halaman yang diambil",
+      "rangesHint": "Contoh: 1-3, 5, 8-10",
+      "addOneMore": "Tambahkan minimal 2 file PDF untuk digabung.",
+      "noPages": "Tidak ada halaman yang cocok — cek nomor halaman.",
+      "moveUp": "Naikkan",
+      "moveDown": "Turunkan",
+      "privacy": "File Anda diproses di perangkat Anda dan tidak pernah diunggah."
+    },
+    "faqCommon": [
+      {
+        "q": "Benar-benar gratis?",
+        "a": "Ya. Semua alat gratis, tanpa daftar, tanpa watermark dan tanpa batas harian."
+      },
+      {
+        "q": "Apakah file saya aman?",
+        "a": "File Anda tidak pernah keluar dari perangkat Anda. Semua diproses di browser, jadi tidak ada yang diunggah ke server."
+      }
+    ],
+    "items": {
+      "compressImage": {
+        "name": "Kompres gambar",
+        "desc": "Perkecil ukuran JPG, PNG dan WebP tanpa penurunan kualitas yang terlihat.",
+        "title": "Kompres Gambar Online Gratis — Perkecil Ukuran JPG, PNG & WebP",
+        "meta": "Kompres gambar online gratis. Perkecil ukuran JPG, PNG, WebP dan HEIC dalam hitungan detik tanpa kehilangan kualitas. Banyak sekaligus, tanpa daftar, tanpa upload.",
+        "h1": "Kompres gambar gratis",
+        "sub": "Perkecil ukuran foto untuk website, email dan WhatsApp. Kompres banyak gambar sekaligus — tidak ada yang diunggah.",
+        "action": "Kompres gambar",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Seberapa kecil gambar saya nanti?",
+            "a": "Biasanya 50–80% lebih kecil untuk foto dengan kualitas 70, tanpa beda yang terlihat. Turunkan kualitas atau atur lebar maks agar lebih kecil lagi."
+          },
+          {
+            "q": "Bisakah saya kompres file PNG?",
+            "a": "Bisa. Di mode Otomatis kami coba PNG dan format modern lalu memakai yang terkecil. Gambar transparan tetap transparan."
+          }
+        ]
+      },
+      "resizeImage": {
+        "name": "Ubah ukuran gambar",
+        "desc": "Ubah lebar dan tinggi dalam piksel atau persen.",
+        "title": "Ubah Ukuran Gambar Online Gratis — Dalam Piksel atau Persen",
+        "meta": "Ubah ukuran gambar online gratis. Atur lebar dan tinggi JPG, PNG dan WebP dalam piksel atau persen, pertahankan rasio, banyak sekaligus. Tanpa daftar, tanpa upload.",
+        "h1": "Ubah ukuran gambar gratis",
+        "sub": "Atur ukuran pasti dalam piksel atau skala dengan persen. Ubah banyak gambar sekaligus untuk media sosial, website dan formulir.",
+        "action": "Ubah ukuran",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Bagaimana mengubah ukuran tanpa gepeng?",
+            "a": "Biarkan \"Pertahankan rasio\" aktif dan isi lebar atau tinggi saja — sisi lainnya dihitung otomatis."
+          },
+          {
+            "q": "Bisakah banyak gambar sekaligus?",
+            "a": "Bisa. Tambahkan sebanyak yang Anda mau; semua memakai pengaturan yang sama dan bisa diunduh dalam satu ZIP."
+          }
+        ]
+      },
+      "heicToJpg": {
+        "name": "HEIC ke JPG",
+        "desc": "Ubah foto HEIC iPhone ke JPG yang bisa dibuka di mana saja.",
+        "title": "Konversi HEIC ke JPG Gratis — Ubah Foto iPhone Online",
+        "meta": "Konversi HEIC ke JPG online gratis. Ubah foto HEIC dan HEIF dari iPhone menjadi JPG yang bisa dibuka di Windows, Android dan semua website. Banyak sekaligus, tanpa upload.",
+        "h1": "Konversi HEIC ke JPG gratis",
+        "sub": "Foto HEIC dari iPhone tidak bisa dibuka di semua tempat. Ubah ke JPG dalam hitungan detik — banyak sekaligus, langsung di perangkat Anda.",
+        "action": "Ubah ke JPG",
+        "accepts": "HEIC · HEIF",
+        "faq": [
+          {
+            "q": "Apa itu file HEIC?",
+            "a": "HEIC adalah format foto bawaan iPhone. Hemat tempat, tapi banyak PC Windows, HP Android dan website tidak bisa membukanya — JPG bisa di mana saja."
+          },
+          {
+            "q": "Apakah kualitas turun saat diubah ke JPG?",
+            "a": "Dengan kualitas 90 atau lebih, perbedaannya tidak terlihat. Atur ke 100 untuk hasil terbaik."
+          }
+        ]
+      },
+      "pngToJpg": {
+        "name": "PNG ke JPG",
+        "desc": "Ubah gambar PNG menjadi file JPG yang lebih kecil.",
+        "title": "Konversi PNG ke JPG Gratis — PNG ke JPEG Online",
+        "meta": "Konversi PNG ke JPG online gratis. Perkecil gambar PNG menjadi JPEG, pilih kualitas dan warna latar. Banyak sekaligus, tanpa daftar, tanpa upload.",
+        "h1": "Konversi PNG ke JPG gratis",
+        "sub": "Untuk foto, file JPG jauh lebih kecil dari PNG. Pilih kualitas dan warna latar untuk area transparan.",
+        "action": "Ubah ke JPG",
+        "accepts": "PNG",
+        "faq": [
+          {
+            "q": "Bagaimana dengan area transparan?",
+            "a": "JPG tidak mendukung transparansi, jadi area itu diisi warna latar yang Anda pilih (putih secara bawaan)."
+          },
+          {
+            "q": "Kenapa mengubah PNG ke JPG?",
+            "a": "Untuk foto, JPG sering 5–10 kali lebih kecil dari PNG, jadi lebih cepat diunggah, dikirim dan dimuat di website."
+          }
+        ]
+      },
+      "webpToJpg": {
+        "name": "WebP ke JPG",
+        "desc": "Ubah gambar WebP ke JPG yang bisa dibuka aplikasi apa pun.",
+        "title": "Konversi WebP ke JPG Gratis — Ubah Gambar WebP Online",
+        "meta": "Konversi WebP ke JPG online gratis. Ubah gambar WebP yang disimpan dari website menjadi JPG yang bisa dibuka di semua aplikasi. Banyak sekaligus, tanpa daftar, tanpa upload.",
+        "h1": "Konversi WebP ke JPG gratis",
+        "sub": "Menyimpan gambar dari website dan ternyata WebP? Ubah ke JPG agar bisa dibuka di aplikasi dan editor apa pun.",
+        "action": "Ubah ke JPG",
+        "accepts": "WebP",
+        "faq": [
+          {
+            "q": "Kenapa gambar dari website tersimpan sebagai WebP?",
+            "a": "Banyak website memakai WebP karena cepat dimuat. Tapi beberapa aplikasi, printer dan program lama tidak bisa membukanya, jadi JPG lebih aman untuk dibagikan."
+          },
+          {
+            "q": "Bisakah banyak WebP sekaligus?",
+            "a": "Bisa. Tambahkan semua gambar WebP lalu unduh JPG satu per satu atau sekaligus dalam ZIP."
+          }
+        ]
+      },
+      "jpgToPng": {
+        "name": "JPG ke PNG",
+        "desc": "Ubah foto JPG menjadi gambar PNG tanpa kehilangan kualitas.",
+        "title": "Konversi JPG ke PNG Gratis — JPEG ke PNG Online",
+        "meta": "Konversi JPG ke PNG online gratis. Ubah foto JPEG menjadi gambar PNG lossless dalam hitungan detik. Banyak sekaligus, tanpa daftar, tanpa upload, tanpa watermark.",
+        "h1": "Konversi JPG ke PNG gratis",
+        "sub": "Ubah foto JPEG menjadi file PNG lossless — cocok untuk editing, alat desain dan upload yang meminta PNG.",
+        "action": "Ubah ke PNG",
+        "accepts": "JPG · JPEG",
+        "faq": [
+          {
+            "q": "Apakah PNG-nya berlatar transparan?",
+            "a": "Tidak — JPG tidak punya transparansi, jadi PNG tetap memakai latar yang sama. Hanya format file yang berubah."
+          },
+          {
+            "q": "Kenapa PNG lebih besar dari JPG saya?",
+            "a": "PNG bersifat lossless dan menyimpan setiap piksel persis. Bagus untuk editing, tapi ukurannya lebih besar dari JPG."
+          }
+        ]
+      },
+      "jpgToWebp": {
+        "name": "Ubah ke WebP",
+        "desc": "Ubah JPG dan PNG menjadi file WebP ringan untuk website.",
+        "title": "Konversi JPG ke WebP Gratis — Ubah Gambar ke WebP Online",
+        "meta": "Konversi JPG dan PNG ke WebP online gratis. Gambar hingga 30% lebih kecil untuk website lebih cepat dan SEO lebih baik. Banyak sekaligus, tanpa daftar, tanpa upload.",
+        "h1": "Ubah gambar ke WebP gratis",
+        "sub": "Gambar WebP lebih kecil dari JPG dan PNG dengan kualitas yang sama — pas untuk website dan toko online yang cepat.",
+        "action": "Ubah ke WebP",
+        "accepts": "JPG · PNG · HEIC",
+        "faq": [
+          {
+            "q": "Kenapa pakai WebP di website saya?",
+            "a": "File WebP biasanya 25–35% lebih kecil dari JPG dengan kualitas sama, jadi halaman lebih cepat dimuat — bagus untuk pengunjung dan peringkat Google."
+          },
+          {
+            "q": "Apakah WebP mempertahankan transparansi?",
+            "a": "Ya. Gambar PNG transparan tetap transparan setelah diubah ke WebP."
+          }
+        ]
+      },
+      "jpgToPdf": {
+        "name": "JPG ke PDF",
+        "desc": "Jadikan foto dan hasil scan satu dokumen PDF.",
+        "title": "Konversi JPG ke PDF Gratis — Ubah Gambar ke PDF Online",
+        "meta": "Konversi gambar JPG, PNG dan HEIC ke PDF online gratis. Gabungkan banyak foto jadi satu PDF, pilih A4 atau Letter dan margin. Tanpa daftar, tanpa upload, tanpa watermark.",
+        "h1": "Konversi JPG ke PDF gratis",
+        "sub": "Gabungkan foto, scan dan screenshot jadi satu PDF. Ubah urutan, pilih ukuran halaman dan unduh langsung.",
+        "action": "Buat PDF",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Bisakah banyak gambar dalam satu PDF?",
+            "a": "Bisa. Tambahkan semua gambar, atur urutan dengan tanda panah, dan setiap gambar menjadi satu halaman PDF."
+          },
+          {
+            "q": "Ukuran halaman mana yang dipilih?",
+            "a": "A4 adalah standar di Indonesia dan kebanyakan negara, Letter di AS dan Kanada. \"Sesuai gambar\" membuat tiap halaman persis seukuran fotonya."
+          }
+        ]
+      },
+      "mergePdf": {
+        "name": "Gabung PDF",
+        "desc": "Gabungkan beberapa PDF jadi satu dengan urutan sesuka Anda.",
+        "title": "Gabung PDF Gratis — Gabungkan File PDF Online dalam Detik",
+        "meta": "Gabung file PDF online gratis. Satukan beberapa PDF menjadi satu dokumen dengan urutan yang Anda mau. Tanpa daftar, tanpa upload, tanpa watermark, tanpa batas.",
+        "h1": "Gabung file PDF gratis",
+        "sub": "Satukan kontrak, invoice dan dokumen menjadi satu PDF. Tambahkan file, atur urutan, lalu unduh.",
+        "action": "Gabung PDF",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Bagaimana mengubah urutan PDF?",
+            "a": "Gunakan tanda panah atas dan bawah di samping setiap file. Halaman digabung dari atas ke bawah."
+          },
+          {
+            "q": "Apakah ada batas jumlah file?",
+            "a": "Tidak ada batas pasti. File yang sangat besar tergantung memori perangkat Anda, tapi puluhan PDF biasa bisa dengan lancar."
+          }
+        ]
+      },
+      "pdfToJpg": {
+        "name": "PDF ke JPG",
+        "desc": "Ubah setiap halaman PDF menjadi gambar berkualitas tinggi.",
+        "title": "Konversi PDF ke JPG Gratis — Ubah Halaman PDF ke Gambar Online",
+        "meta": "Konversi PDF ke JPG atau PNG online gratis. Setiap halaman jadi gambar berkualitas tinggi, pilih halaman dan resolusi, unduh dalam ZIP. Tanpa daftar, tanpa upload.",
+        "h1": "Konversi PDF ke JPG gratis",
+        "sub": "Simpan halaman PDF sebagai gambar JPG atau PNG — semua halaman atau yang Anda pilih saja, dalam resolusi tinggi.",
+        "action": "Ubah ke gambar",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Bisakah hanya beberapa halaman?",
+            "a": "Bisa. Ketik halaman yang Anda mau, misalnya 1-3, 5. Biarkan kosong untuk semua halaman."
+          },
+          {
+            "q": "Kualitas mana yang dipilih?",
+            "a": "\"Tinggi\" sudah cukup tajam untuk kebanyakan keperluan. Pilih \"Sangat tinggi\" untuk cetak atau teks kecil; file akan lebih besar."
+          }
+        ]
+      },
+      "splitPdf": {
+        "name": "Pisah PDF",
+        "desc": "Ambil halaman tertentu atau pisahkan PDF jadi beberapa file.",
+        "title": "Pisah PDF Gratis — Ambil Halaman dari PDF Online",
+        "meta": "Pisah PDF online gratis. Ambil halaman yang Anda butuhkan ke PDF baru atau jadikan setiap halaman file sendiri. Tanpa daftar, tanpa upload, tanpa watermark.",
+        "h1": "Pisah PDF gratis",
+        "sub": "Ambil halaman yang Anda perlukan, atau pisahkan PDF menjadi satu file per halaman. Cepat, gratis dan privat.",
+        "action": "Pisah PDF",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Bagaimana mengambil halaman tertentu?",
+            "a": "Pilih \"Pilih halaman\" lalu ketik halamannya, seperti 1-3, 5. Halaman itu disimpan ke PDF baru dengan urutan tersebut."
+          },
+          {
+            "q": "Apakah memisah mengubah kualitas?",
+            "a": "Tidak. Halaman disalin persis apa adanya — teks, gambar dan tautan tetap sama."
+          }
+        ]
+      }
+    }
   },
   footer: { tagline: "Alat online gratis yang menghormati privasi Anda.", privacy: "Privasi", terms: "Ketentuan", rights: "Hak cipta dilindungi.", madeFree: "Gratis selamanya. Tanpa daftar." },
 };

@@ -5,7 +5,10 @@ import QrStudio from "@/components/QrStudio";
 import Scanner from "@/components/Scanner";
 import Bulk from "@/components/Bulk";
 import Barcode from "@/components/Barcode";
-import { TypeGrid, Features, Compare, HowTo, Faq, JsonLd, faqLd, appLd } from "@/components/Sections";
+import ImageTool from "@/components/ImageTool";
+import PdfTool from "@/components/PdfTool";
+import { TypeGrid, ToolGrid, Features, Compare, HowTo, Faq, JsonLd, faqLd, appLd } from "@/components/Sections";
+import { TOOL_BY_SLUG } from "@/lib/tools";
 import { getDict, alternates, fmt, type Dict } from "@/lib/i18n";
 import { TYPE_BY_SLUG } from "@/lib/qrTypes";
 import { ALL_SLUGS } from "@/lib/routes";
@@ -28,6 +31,9 @@ function pageText(d: Dict, slug: string): { title: string; meta: string } | null
   if (slug === "qr-code-scanner") return { title: d.scanner.title, meta: d.scanner.meta };
   if (slug === "bulk-qr-code-generator") return { title: d.bulk.title, meta: d.bulk.meta };
   if (slug === "barcode-generator") return { title: d.barcode.title, meta: d.barcode.meta };
+  if (slug === "tools") return { title: d.tools.hubTitle, meta: d.tools.hubMeta };
+  const tool = TOOL_BY_SLUG[slug];
+  if (tool) return { title: d.tools.items[tool.id].title, meta: d.tools.items[tool.id].meta };
   if (slug === "privacy") return { title: d.legal.privacyTitle, meta: d.legal.privacy[0] };
   if (slug === "terms") return { title: d.legal.termsTitle, meta: d.legal.terms[0] };
   return null;
@@ -99,6 +105,7 @@ export default async function SlugPage({ params }: P) {
           <Scanner dict={d} locale={locale} />
         </div>
         <TypeGrid dict={d} locale={locale} />
+        <ToolGrid dict={d} locale={locale} exclude="/qr-code-scanner" title={d.tools.more} />
       </>
     );
   }
@@ -114,6 +121,37 @@ export default async function SlugPage({ params }: P) {
         </div>
         <Features dict={d} />
         <TypeGrid dict={d} locale={locale} />
+        <ToolGrid dict={d} locale={locale} exclude="/bulk-qr-code-generator" title={d.tools.more} />
+      </>
+    );
+  }
+
+  const tool = TOOL_BY_SLUG[slug];
+  if (tool) {
+    const it = d.tools.items[tool.id];
+    const faq = [...it.faq, ...d.tools.faqCommon];
+    return (
+      <>
+        <JsonLd data={appLd(it.h1, p.meta, url, locale)} />
+        <JsonLd data={faqLd(d, faq)} />
+        <JsonLd data={crumbs(locale, it.h1, slug)} />
+        <Hero badge={d.tools.badge} h1a={it.h1} sub={it.sub} />
+        <div className="mx-auto max-w-7xl px-4">
+          {tool.group === "pdf" ? <PdfTool tool={tool} dict={d} /> : <ImageTool tool={tool} dict={d} />}
+        </div>
+        <Faq dict={d} items={faq} />
+        <ToolGrid dict={d} locale={locale} exclude={`/${slug}`} title={d.tools.more} />
+      </>
+    );
+  }
+
+  if (slug === "tools") {
+    return (
+      <>
+        <JsonLd data={crumbs(locale, d.tools.hubH1, slug)} />
+        <Hero badge={d.tools.badge} h1a={d.tools.hubH1} sub={d.tools.hubSub} />
+        <ToolGrid dict={d} locale={locale} h1 />
+        <Faq dict={d} items={d.tools.faqCommon} />
       </>
     );
   }
@@ -130,6 +168,7 @@ export default async function SlugPage({ params }: P) {
         </div>
         <Faq dict={d} items={d.barcode.faq} />
         <TypeGrid dict={d} locale={locale} />
+        <ToolGrid dict={d} locale={locale} exclude="/barcode-generator" title={d.tools.more} />
       </>
     );
   }

@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const de: Dict = {
-  nav: { generator: "QR-Generator", scanner: "QR-Scanner", bulk: "Massen-QR", barcode: "Barcode", types: "QR-Typen", language: "Sprache", theme: "Design" },
+  nav: { generator: "QR-Generator", scanner: "QR-Scanner", bulk: "Massen-QR", barcode: "Barcode", tools: "Alle Tools", types: "QR-Typen", language: "Sprache", theme: "Design" },
   home: {
     title: "Kostenloser QR-Code-Generator mit Logo — Ohne Anmeldung, läuft nie ab",
     meta: "Erstelle kostenlos individuelle QR-Codes: Logo, Farben, Verläufe, Rahmen, SVG- & PDF-Export, WLAN, vCard, WhatsApp und mehr. Ohne Anmeldung, ohne Wasserzeichen, läuft nie ab.",
@@ -186,6 +186,303 @@ const de: Dict = {
         "a": "Nutze dunkle Striche auf hellem Hintergrund, drucke ihn nicht zu klein und lass den weißen Rand frei. EAN und UPC brauchen eine korrekte Prüfziffer — gib für EAN-13 12 Ziffern ein, wir berechnen sie."
       }
     ]
+  },
+  tools: {
+    "hubTitle": "Kostenlose Online-Tools — Bild, PDF, QR-Code & Barcode",
+    "hubMeta": "Kostenlose Online-Tools direkt im Browser: Bilder komprimieren und verkleinern, HEIC in JPG, JPG in PDF, PDF zusammenfügen und teilen, QR-Codes und Barcodes. Ohne Anmeldung, ohne Upload.",
+    "hubH1": "Alle kostenlosen Tools",
+    "hubSub": "Bilder, PDFs, QR-Codes und Barcodes — schnell, kostenlos und privat. Deine Dateien verlassen nie dein Gerät.",
+    "badge": "100 % kostenlos · Ohne Anmeldung · Dateien bleiben auf deinem Gerät",
+    "more": "Weitere kostenlose Tools",
+    "groups": {
+      "qr": "QR-Code & Barcode",
+      "image": "Bild-Tools",
+      "pdf": "PDF-Tools"
+    },
+    "ui": {
+      "chooseFiles": "Dateien auswählen",
+      "chooseFile": "Datei auswählen",
+      "dropHint": "oder hierher ziehen — Einfügen mit Strg+V geht auch",
+      "wrongType": "Einige Dateien wurden übersprungen, weil dieses Tool sie nicht unterstützt.",
+      "files": "{n} Dateien",
+      "pages": "{n} Seiten",
+      "clear": "Alle entfernen",
+      "remove": "Entfernen",
+      "download": "Herunterladen",
+      "downloadAll": "Alle herunterladen (ZIP)",
+      "settings": "Einstellungen",
+      "working": "Bearbeite {i} von {n}…",
+      "done": "Fertig!",
+      "kept": "Schon optimiert — Original behalten",
+      "error": "Diese Datei konnte nicht gelesen werden.",
+      "noWebp": "Dein Browser kann keine WebP-Dateien erstellen. Bitte nutze Chrome, Edge oder Firefox.",
+      "encrypted": "Dieses PDF ist passwortgeschützt oder beschädigt.",
+      "bySize": "Nach Größe",
+      "byPercent": "Nach Prozent",
+      "width": "Breite",
+      "height": "Höhe",
+      "keepRatio": "Seitenverhältnis beibehalten",
+      "percent": "Größe",
+      "maxWidth": "Max. Breite",
+      "original": "Original",
+      "format": "Ausgabeformat",
+      "auto": "Auto",
+      "sameFormat": "Gleich",
+      "quality": "Qualität",
+      "background": "Hintergrund",
+      "pageSize": "Seitengröße",
+      "fitImage": "An Bild anpassen",
+      "margin": "Rand",
+      "none": "Keiner",
+      "small": "Klein",
+      "large": "Groß",
+      "resolution": "Bildqualität",
+      "normal": "Normal",
+      "high": "Hoch",
+      "veryHigh": "Sehr hoch",
+      "splitEach": "Jede Seite",
+      "extract": "Seiten wählen",
+      "pagesOptional": "Seiten (leer = alle)",
+      "pagesToExtract": "Seiten zum Extrahieren",
+      "rangesHint": "Beispiel: 1-3, 5, 8-10",
+      "addOneMore": "Füge mindestens 2 PDF-Dateien zum Zusammenfügen hinzu.",
+      "noPages": "Keine passenden Seiten — prüfe die Seitenzahlen.",
+      "moveUp": "Nach oben",
+      "moveDown": "Nach unten",
+      "privacy": "Deine Dateien werden auf deinem Gerät verarbeitet und nie hochgeladen."
+    },
+    "faqCommon": [
+      {
+        "q": "Ist das wirklich kostenlos?",
+        "a": "Ja. Alle Tools sind kostenlos, ohne Anmeldung, ohne Wasserzeichen und ohne Tageslimit."
+      },
+      {
+        "q": "Sind meine Dateien sicher?",
+        "a": "Deine Dateien verlassen nie dein Gerät. Alles wird im Browser verarbeitet, nichts wird auf einen Server hochgeladen."
+      }
+    ],
+    "items": {
+      "compressImage": {
+        "name": "Bild komprimieren",
+        "desc": "JPG, PNG und WebP kleiner machen — ohne sichtbaren Qualitätsverlust.",
+        "title": "Bild komprimieren online kostenlos — JPG, PNG & WebP verkleinern",
+        "meta": "Bilder online kostenlos komprimieren. Dateigröße von JPG, PNG, WebP und HEIC in Sekunden reduzieren, ohne Qualitätsverlust. Stapelweise, ohne Anmeldung, ohne Upload.",
+        "h1": "Bilder kostenlos komprimieren",
+        "sub": "Fotos für Websites, E-Mail und WhatsApp verkleinern. Viele Bilder auf einmal komprimieren — nichts wird hochgeladen.",
+        "action": "Bilder komprimieren",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Wie viel kleiner werden meine Bilder?",
+            "a": "Meist 50–80 % kleiner bei Fotos mit Qualität 70, ohne sichtbaren Unterschied. Senke die Qualität oder setze eine max. Breite für noch kleinere Dateien."
+          },
+          {
+            "q": "Kann ich PNG-Dateien komprimieren?",
+            "a": "Ja. Im Auto-Modus testen wir PNG und ein modernes Format und behalten das kleinste. Transparente Bilder bleiben transparent."
+          }
+        ]
+      },
+      "resizeImage": {
+        "name": "Bildgröße ändern",
+        "desc": "Breite und Höhe in Pixeln oder Prozent ändern.",
+        "title": "Bildgröße ändern online kostenlos — in Pixeln oder Prozent",
+        "meta": "Bildgröße online kostenlos ändern. Breite und Höhe von JPG, PNG und WebP in Pixeln oder Prozent ändern, Seitenverhältnis behalten, stapelweise. Ohne Anmeldung, ohne Upload.",
+        "h1": "Bildgröße kostenlos ändern",
+        "sub": "Exakte Größe in Pixeln oder prozentual skalieren. Viele Bilder auf einmal für Social Media, Websites und Formulare anpassen.",
+        "action": "Größe ändern",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Wie ändere ich die Größe ohne Verzerren?",
+            "a": "Lass „Seitenverhältnis beibehalten“ an und gib nur Breite oder Höhe ein — die andere Seite wird berechnet."
+          },
+          {
+            "q": "Kann ich viele Bilder auf einmal ändern?",
+            "a": "Ja. Füge so viele Bilder hinzu, wie du willst; alle bekommen dieselben Einstellungen und lassen sich als ein ZIP laden."
+          }
+        ]
+      },
+      "heicToJpg": {
+        "name": "HEIC in JPG",
+        "desc": "iPhone-HEIC-Fotos in JPG umwandeln, das überall funktioniert.",
+        "title": "HEIC in JPG umwandeln kostenlos — iPhone-Fotos online konvertieren",
+        "meta": "HEIC online kostenlos in JPG umwandeln. iPhone-Fotos im HEIC- und HEIF-Format zu JPG machen, das unter Windows, Android und auf jeder Website funktioniert. Stapelweise, ohne Upload.",
+        "h1": "HEIC kostenlos in JPG umwandeln",
+        "sub": "iPhone-Fotos im HEIC-Format öffnen sich nicht überall. In Sekunden zu JPG umwandeln — viele auf einmal, direkt auf deinem Gerät.",
+        "action": "In JPG umwandeln",
+        "accepts": "HEIC · HEIF",
+        "faq": [
+          {
+            "q": "Was ist eine HEIC-Datei?",
+            "a": "HEIC ist das Standard-Fotoformat von iPhones. Es spart Platz, aber viele Windows-PCs, Android-Handys und Websites können es nicht öffnen — JPG funktioniert überall."
+          },
+          {
+            "q": "Verliere ich Qualität beim Umwandeln?",
+            "a": "Ab Qualität 90 ist kein Unterschied sichtbar. Für das beste Ergebnis kannst du 100 einstellen."
+          }
+        ]
+      },
+      "pngToJpg": {
+        "name": "PNG in JPG",
+        "desc": "PNG-Bilder in kleinere JPG-Dateien umwandeln.",
+        "title": "PNG in JPG umwandeln kostenlos — PNG zu JPEG online",
+        "meta": "PNG online kostenlos in JPG umwandeln. PNG-Bilder als JPEG verkleinern, Qualität und Hintergrundfarbe wählen. Stapelweise, ohne Anmeldung, ohne Upload.",
+        "h1": "PNG kostenlos in JPG umwandeln",
+        "sub": "Für Fotos sind JPG-Dateien viel kleiner als PNG. Wähle Qualität und Hintergrundfarbe für transparente Bereiche.",
+        "action": "In JPG umwandeln",
+        "accepts": "PNG",
+        "faq": [
+          {
+            "q": "Was passiert mit transparenten Bereichen?",
+            "a": "JPG kennt keine Transparenz, daher werden diese Bereiche mit der gewählten Hintergrundfarbe gefüllt (standardmäßig Weiß)."
+          },
+          {
+            "q": "Warum PNG in JPG umwandeln?",
+            "a": "Bei Fotos ist ein JPG oft 5- bis 10-mal kleiner als ein PNG — schneller hochzuladen, zu versenden und auf Websites zu laden."
+          }
+        ]
+      },
+      "webpToJpg": {
+        "name": "WebP in JPG",
+        "desc": "WebP-Bilder in JPG umwandeln, das jede App öffnet.",
+        "title": "WebP in JPG umwandeln kostenlos — WebP-Bilder online konvertieren",
+        "meta": "WebP online kostenlos in JPG umwandeln. Von Websites gespeicherte WebP-Bilder zu JPG machen, das jede App öffnet. Stapelweise, ohne Anmeldung, ohne Upload.",
+        "h1": "WebP kostenlos in JPG umwandeln",
+        "sub": "Bild von einer Website gespeichert und es ist WebP? In JPG umwandeln, damit es in jeder App und jedem Editor aufgeht.",
+        "action": "In JPG umwandeln",
+        "accepts": "WebP",
+        "faq": [
+          {
+            "q": "Warum werden Bilder von Websites als WebP gespeichert?",
+            "a": "Viele Websites nutzen WebP, weil es schnell lädt. Manche Apps, Drucker und ältere Programme können es aber nicht öffnen — JPG ist zum Teilen sicherer."
+          },
+          {
+            "q": "Kann ich viele WebP-Dateien auf einmal umwandeln?",
+            "a": "Ja. Füge alle WebP-Bilder hinzu und lade die JPGs einzeln oder zusammen als ZIP herunter."
+          }
+        ]
+      },
+      "jpgToPng": {
+        "name": "JPG in PNG",
+        "desc": "JPG-Fotos in verlustfreie PNG-Bilder umwandeln.",
+        "title": "JPG in PNG umwandeln kostenlos — JPEG zu PNG online",
+        "meta": "JPG online kostenlos in PNG umwandeln. JPEG-Fotos in Sekunden zu verlustfreien PNG-Bildern machen. Stapelweise, ohne Anmeldung, ohne Upload, ohne Wasserzeichen.",
+        "h1": "JPG kostenlos in PNG umwandeln",
+        "sub": "JPEG-Fotos in verlustfreie PNG-Dateien umwandeln — ideal zum Bearbeiten, für Design-Tools und Uploads, die PNG verlangen.",
+        "action": "In PNG umwandeln",
+        "accepts": "JPG · JPEG",
+        "faq": [
+          {
+            "q": "Hat das PNG einen transparenten Hintergrund?",
+            "a": "Nein — ein JPG hat keine Transparenz, daher behält das PNG den gleichen Hintergrund. Nur das Dateiformat ändert sich."
+          },
+          {
+            "q": "Warum ist das PNG größer als mein JPG?",
+            "a": "PNG ist verlustfrei und speichert jedes Pixel exakt. Ideal zum Bearbeiten, aber größer als JPG."
+          }
+        ]
+      },
+      "jpgToWebp": {
+        "name": "In WebP umwandeln",
+        "desc": "JPG und PNG in leichte WebP-Dateien für Websites umwandeln.",
+        "title": "JPG in WebP umwandeln kostenlos — Bilder online zu WebP",
+        "meta": "JPG und PNG online kostenlos in WebP umwandeln. Bis zu 30 % kleinere Bilder für schnellere Websites und besseres SEO. Stapelweise, ohne Anmeldung, ohne Upload.",
+        "h1": "Bilder kostenlos in WebP umwandeln",
+        "sub": "WebP-Bilder sind bei gleicher Qualität kleiner als JPG und PNG — perfekt für schnelle Websites und Online-Shops.",
+        "action": "In WebP umwandeln",
+        "accepts": "JPG · PNG · HEIC",
+        "faq": [
+          {
+            "q": "Warum WebP auf meiner Website nutzen?",
+            "a": "WebP-Dateien sind bei gleicher Qualität meist 25–35 % kleiner als JPG. Seiten laden schneller — gut für Besucher und Google-Ranking."
+          },
+          {
+            "q": "Bleibt bei WebP die Transparenz erhalten?",
+            "a": "Ja. Transparente PNG-Bilder bleiben auch als WebP transparent."
+          }
+        ]
+      },
+      "jpgToPdf": {
+        "name": "JPG in PDF",
+        "desc": "Fotos und Scans zu einem PDF-Dokument machen.",
+        "title": "JPG in PDF umwandeln kostenlos — Bilder online zu PDF",
+        "meta": "JPG-, PNG- und HEIC-Bilder online kostenlos in PDF umwandeln. Viele Fotos zu einem PDF zusammenfassen, A4 oder Letter und Ränder wählen. Ohne Anmeldung, ohne Upload, ohne Wasserzeichen.",
+        "h1": "JPG kostenlos in PDF umwandeln",
+        "sub": "Fotos, Scans und Screenshots in einem PDF zusammenfassen. Reihenfolge ändern, Seitengröße wählen und sofort herunterladen.",
+        "action": "PDF erstellen",
+        "accepts": "JPG · PNG · WebP · HEIC",
+        "faq": [
+          {
+            "q": "Kann ich viele Bilder in ein PDF packen?",
+            "a": "Ja. Füge alle Bilder hinzu, ändere die Reihenfolge mit den Pfeilen — jedes Bild wird eine Seite im PDF."
+          },
+          {
+            "q": "Welche Seitengröße soll ich wählen?",
+            "a": "A4 ist in Deutschland und den meisten Ländern Standard, Letter in den USA und Kanada. „An Bild anpassen“ macht jede Seite genau so groß wie ihr Foto."
+          }
+        ]
+      },
+      "mergePdf": {
+        "name": "PDF zusammenfügen",
+        "desc": "Mehrere PDFs in beliebiger Reihenfolge zu einem verbinden.",
+        "title": "PDF zusammenfügen kostenlos — PDF-Dateien online verbinden",
+        "meta": "PDF-Dateien online kostenlos zusammenfügen. Mehrere PDFs in der gewünschten Reihenfolge zu einem Dokument verbinden. Ohne Anmeldung, ohne Upload, ohne Wasserzeichen, ohne Limit.",
+        "h1": "PDF-Dateien kostenlos zusammenfügen",
+        "sub": "Verträge, Rechnungen und Dokumente zu einem PDF verbinden. Dateien hinzufügen, Reihenfolge festlegen, herunterladen.",
+        "action": "PDF zusammenfügen",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Wie ändere ich die Reihenfolge der PDFs?",
+            "a": "Nutze die Pfeile nach oben und unten neben jeder Datei. Die Seiten werden von oben nach unten zusammengefügt."
+          },
+          {
+            "q": "Gibt es ein Dateilimit?",
+            "a": "Kein festes Limit. Sehr große Dateien hängen vom Speicher deines Geräts ab, aber Dutzende normale PDFs klappen problemlos."
+          }
+        ]
+      },
+      "pdfToJpg": {
+        "name": "PDF in JPG",
+        "desc": "Jede PDF-Seite in ein hochwertiges Bild umwandeln.",
+        "title": "PDF in JPG umwandeln kostenlos — PDF-Seiten online als Bilder",
+        "meta": "PDF online kostenlos in JPG oder PNG umwandeln. Jede Seite als hochwertiges Bild, Seiten und Auflösung wählen, als ZIP laden. Ohne Anmeldung, ohne Upload.",
+        "h1": "PDF kostenlos in JPG umwandeln",
+        "sub": "PDF-Seiten als JPG- oder PNG-Bilder speichern — alle oder nur ausgewählte, in hoher Auflösung.",
+        "action": "In Bilder umwandeln",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Kann ich nur einige Seiten umwandeln?",
+            "a": "Ja. Gib die gewünschten Seiten ein, z. B. 1-3, 5. Leer lassen, um alle Seiten umzuwandeln."
+          },
+          {
+            "q": "Welche Qualität soll ich wählen?",
+            "a": "„Hoch“ ist für fast alles scharf genug. Wähle „Sehr hoch“ für Druck oder kleine Schrift; die Dateien werden größer."
+          }
+        ]
+      },
+      "splitPdf": {
+        "name": "PDF teilen",
+        "desc": "Seiten extrahieren oder ein PDF in einzelne Dateien teilen.",
+        "title": "PDF teilen kostenlos — Seiten aus PDF online extrahieren",
+        "meta": "PDF online kostenlos teilen. Benötigte Seiten in ein neues PDF extrahieren oder jede Seite als eigene Datei speichern. Ohne Anmeldung, ohne Upload, ohne Wasserzeichen.",
+        "h1": "PDF kostenlos teilen",
+        "sub": "Hol dir die Seiten, die du brauchst, oder teile ein PDF in eine Datei pro Seite. Schnell, kostenlos und privat.",
+        "action": "PDF teilen",
+        "accepts": "PDF",
+        "faq": [
+          {
+            "q": "Wie extrahiere ich bestimmte Seiten?",
+            "a": "Wähle „Seiten wählen“ und gib die Seiten ein, z. B. 1-3, 5. Sie werden in dieser Reihenfolge in einem neuen PDF gespeichert."
+          },
+          {
+            "q": "Ändert das Teilen die Qualität?",
+            "a": "Nein. Die Seiten werden exakt kopiert — Text, Bilder und Links bleiben gleich."
+          }
+        ]
+      }
+    }
   },
   footer: { tagline: "Kostenlose Online-Tools, die deine Privatsphäre respektieren.", privacy: "Datenschutz", terms: "Bedingungen", rights: "Alle Rechte vorbehalten.", madeFree: "Für immer kostenlos. Ohne Anmeldung." },
 };

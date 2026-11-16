@@ -3,6 +3,7 @@ import Icon from "./Icon";
 import { Logo } from "./Header";
 import { fmt, type Dict } from "@/lib/i18n";
 import { QR_TYPES } from "@/lib/qrTypes";
+import { TOOLS } from "@/lib/tools";
 import { SITE, type Locale } from "@/lib/site";
 
 export function TypeGrid({ dict, locale }: { dict: Dict; locale: Locale }) {
@@ -26,7 +27,51 @@ export function TypeGrid({ dict, locale }: { dict: Dict; locale: Locale }) {
   );
 }
 
-const FEAT_ICONS = ["infinity", "palette", "frame", "download", "layers", "shield"];
+/** All tools, grouped — used on the /tools hub and as "More free tools" under every page. */
+export function ToolGrid({ dict, locale, exclude, title, h1 = false }: { dict: Dict; locale: Locale; exclude?: string; title?: string; h1?: boolean }) {
+  const t = dict.tools;
+  const qr = [
+    { href: "", name: dict.nav.generator, desc: dict.features.items[1].d, icon: "grid" },
+    { href: "/qr-code-scanner", name: dict.scanner.h1, desc: dict.scanner.sub, icon: "camera" },
+    { href: "/bulk-qr-code-generator", name: dict.bulk.h1, desc: dict.bulk.sub, icon: "layers" },
+    { href: "/barcode-generator", name: dict.barcode.h1, desc: dict.barcode.sub, icon: "sliders" },
+  ];
+  const groups = [
+    { title: t.groups.image, items: TOOLS.filter((x) => x.group === "image").map((x) => ({ href: `/${x.slug}`, name: t.items[x.id].name, desc: t.items[x.id].desc, icon: x.icon })) },
+    { title: t.groups.pdf, items: TOOLS.filter((x) => x.group === "pdf").map((x) => ({ href: `/${x.slug}`, name: t.items[x.id].name, desc: t.items[x.id].desc, icon: x.icon })) },
+    { title: t.groups.qr, items: qr },
+  ];
+  const H = h1 ? "h2" : "h3";
+  return (
+    <section className="mx-auto max-w-7xl px-4 py-16">
+      {title && <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h2>}
+      <div className="space-y-10 pt-10">
+        {groups.map((g) => (
+          <div key={g.title}>
+            <H className="mb-4 text-sm font-extrabold uppercase tracking-[.14em] text-slate-500 dark:text-slate-400">{g.title}</H>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {g.items
+                .filter((it) => it.href !== exclude)
+                .map((it) => (
+                  <Link key={it.href} href={`/${locale}${it.href}`} className="group flex gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-brand-400 hover:shadow-soft dark:border-slate-800 dark:bg-slate-900">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 dark:bg-brand-950/60 dark:text-brand-300">
+                      <Icon name={it.icon} />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block font-bold group-hover:text-brand-700 dark:group-hover:text-brand-300">{it.name}</span>
+                      <span className="mt-0.5 line-clamp-2 block text-sm text-slate-500 dark:text-slate-400">{it.desc}</span>
+                    </span>
+                  </Link>
+                ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const FEAT_ICONS =["infinity", "palette", "frame", "download", "layers", "shield"];
 
 export function Features({ dict }: { dict: Dict }) {
   return (
@@ -138,6 +183,10 @@ export function Footer({ dict, locale }: { dict: Dict; locale: Locale }) {
           <Link href={`/${locale}/qr-code-scanner`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.nav.scanner}</Link>
           <Link href={`/${locale}/bulk-qr-code-generator`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.nav.bulk}</Link>
           <Link href={`/${locale}/barcode-generator`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.barcode.h1}</Link>
+          {TOOLS.map((t) => (
+            <Link key={t.id} href={`/${locale}/${t.slug}`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.tools.items[t.id].name}</Link>
+          ))}
+          <Link href={`/${locale}/tools`} className="font-semibold text-brand-700 hover:text-brand-600 dark:text-brand-300">{dict.nav.tools} →</Link>
         </div>
       </div>
       <div className="border-t border-slate-100 dark:border-slate-800">

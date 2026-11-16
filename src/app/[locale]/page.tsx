@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import QrStudio from "@/components/QrStudio";
-import { TypeGrid, Features, Compare, HowTo, Faq, JsonLd, faqLd, appLd } from "@/components/Sections";
+import { TypeGrid, ToolGrid, Features, Compare, HowTo, Faq, JsonLd, faqLd, appLd } from "@/components/Sections";
 import { getDict, alternates } from "@/lib/i18n";
 import { SITE, type Locale } from "@/lib/site";
 
@@ -35,6 +35,7 @@ export default async function Home({ params }: P) {
       <Compare dict={d} />
       <HowTo dict={d} />
       <TypeGrid dict={d} locale={locale} />
+      <ToolGrid dict={d} locale={locale} exclude="" title={d.tools.more} />
       <Faq dict={d} />
     </>
   );
