@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const pt: Dict = {
-  nav: { generator: "Gerador QR", scanner: "Leitor QR", bulk: "QR em massa", types: "Tipos de QR", language: "Idioma", theme: "Tema" },
+  nav: { generator: "Gerador QR", scanner: "Leitor QR", bulk: "QR em massa", barcode: "Código de barras", types: "Tipos de QR", language: "Idioma", theme: "Tema" },
   home: {
     title: "Gerador de QR Code Grátis com Logo — Sem cadastro, nunca expira",
     meta: "Crie QR Codes personalizados grátis: logo, cores, degradês, molduras, exportação SVG e PDF, WiFi, vCard, WhatsApp e mais. Sem cadastro, sem marca d'água, nunca expiram.",
@@ -133,6 +133,59 @@ const pt: Dict = {
       "Você pode usar os QR Codes gerados para qualquer fim pessoal ou comercial. Você é responsável pelo conteúdo codificado.",
       "Não use este serviço para criar códigos que levem a conteúdo ilegal, malware ou phishing.",
     ],
+  },
+  barcode: {
+    "title": "Gerador de Código de Barras Grátis — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Crie códigos de barras online grátis: EAN-13, UPC-A, Code 128, Code 39, ITF-14 e mais. Tamanho e cores personalizados, baixe PNG, SVG ou PDF. Sem cadastro e sem marca d'água.",
+    "h1": "Gerador de código de barras grátis",
+    "sub": "EAN, UPC, Code 128 e mais para produtos, envios e estoque. Pronto para imprimir, sem cadastro e sem marca d'água.",
+    "type": "Tipo de código",
+    "data": "Dados do código",
+    "label": "Texto abaixo do código (opcional)",
+    "showText": "Mostrar texto",
+    "hideText": "Ocultar texto",
+    "barWidth": "Largura da barra",
+    "height": "Altura",
+    "fontSize": "Tamanho do texto",
+    "margin": "Margem",
+    "barColor": "Cor das barras",
+    "fileType": "Tipo de arquivo",
+    "example": "Usar um exemplo",
+    "invalid": "Estes dados não servem para {name}.",
+    "hints": {
+      "CODE128": "Letras, números e símbolos. O código mais usado em envios e estoque.",
+      "EAN13": "12 ou 13 dígitos. Produtos de varejo no mundo todo — digite 12 e adicionamos o dígito verificador.",
+      "UPC": "11 ou 12 dígitos. Produtos de varejo nos EUA e Canadá.",
+      "EAN8": "7 ou 8 dígitos. Embalagens pequenas.",
+      "UPCE": "6 ou 8 dígitos. UPC curto para itens pequenos.",
+      "CODE39": "Letras maiúsculas, números, espaço e - . $ / + %. Indústria e crachás.",
+      "ITF14": "13 ou 14 dígitos. Caixas de transporte e paletes.",
+      "codabar": "Números e - $ : / . + com A, B, C ou D no início e no fim. Bibliotecas e bancos de sangue.",
+      "MSI": "Apenas números. Prateleiras de armazém e estoque.",
+      "pharmacode": "Um número de 3 a 131070. Embalagens farmacêuticas."
+    },
+    "faq": [
+      {
+        "q": "Qual tipo de código de barras devo usar?",
+        "a": "Para produtos vendidos em lojas, use EAN-13 (mundial) ou UPC-A (EUA e Canadá). Para etiquetas de envio, estoque e códigos internos, use Code 128 — aceita letras e números."
+      },
+      {
+        "q": "Posso usar de graça para fins comerciais?",
+        "a": "Sim. Baixe e imprima quantos precisar, para qualquer uso, sem marca d'água e sem cadastro."
+      },
+      {
+        "q": "Preciso de um número GS1 para vender em lojas?",
+        "a": "A maioria das lojas exige números EAN/UPC registrados na GS1. Esta ferramenta cria a imagem do código; ela não fornece um número de produto oficial."
+      },
+      {
+        "q": "Qual formato é melhor para imprimir?",
+        "a": "SVG ou PDF. São vetoriais, então as barras ficam nítidas em qualquer tamanho — importante para os leitores."
+      },
+      {
+        "q": "Por que meu código não é lido?",
+        "a": "Use barras escuras em fundo claro, não imprima muito pequeno e mantenha a margem branca ao redor. EAN e UPC precisam de um dígito verificador correto — digite 12 dígitos para EAN-13 e nós calculamos."
+      }
+    ]
   },
   footer: { tagline: "Ferramentas online grátis que respeitam sua privacidade.", privacy: "Privacidade", terms: "Termos", rights: "Todos os direitos reservados.", madeFree: "Grátis para sempre. Sem cadastro." },
 };

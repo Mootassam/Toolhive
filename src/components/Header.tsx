@@ -34,6 +34,7 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
           <Link href={`/${locale}`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.generator}</Link>
           <Link href={`/${locale}/qr-code-scanner`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.scanner}</Link>
           <Link href={`/${locale}/bulk-qr-code-generator`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.bulk}</Link>
+          <Link href={`/${locale}/barcode-generator`} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">{n.barcode}</Link>
         </nav>
         <div className="ms-auto flex items-center gap-2">
           <LangSwitch locale={locale} label={n.language} />
@@ -44,6 +45,7 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Dict })
         <Link href={`/${locale}`} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold">{n.generator}</Link>
         <Link href={`/${locale}/qr-code-scanner`} className="flex shrink-0 items-center gap-1 rounded-lg px-3 py-1.5 text-sm font-semibold"><Icon name="camera" className="h-4 w-4" />{n.scanner}</Link>
         <Link href={`/${locale}/bulk-qr-code-generator`} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold">{n.bulk}</Link>
+        <Link href={`/${locale}/barcode-generator`} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold">{n.barcode}</Link>
       </nav>
     </header>
   );

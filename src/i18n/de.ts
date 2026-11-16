@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const de: Dict = {
-  nav: { generator: "QR-Generator", scanner: "QR-Scanner", bulk: "Massen-QR", types: "QR-Typen", language: "Sprache", theme: "Design" },
+  nav: { generator: "QR-Generator", scanner: "QR-Scanner", bulk: "Massen-QR", barcode: "Barcode", types: "QR-Typen", language: "Sprache", theme: "Design" },
   home: {
     title: "Kostenloser QR-Code-Generator mit Logo — Ohne Anmeldung, läuft nie ab",
     meta: "Erstelle kostenlos individuelle QR-Codes: Logo, Farben, Verläufe, Rahmen, SVG- & PDF-Export, WLAN, vCard, WhatsApp und mehr. Ohne Anmeldung, ohne Wasserzeichen, läuft nie ab.",
@@ -133,6 +133,59 @@ const de: Dict = {
       "Du darfst erzeugte QR-Codes für jeden privaten oder kommerziellen Zweck nutzen. Du bist für den kodierten Inhalt verantwortlich.",
       "Nutze diesen Dienst nicht für Codes, die zu illegalen Inhalten, Malware oder Phishing führen.",
     ],
+  },
+  barcode: {
+    "title": "Kostenloser Barcode-Generator — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Barcodes online kostenlos erstellen: EAN-13, UPC-A, Code 128, Code 39, ITF-14 und mehr. Größe und Farben anpassen, als PNG, SVG oder PDF herunterladen. Ohne Anmeldung, ohne Wasserzeichen.",
+    "h1": "Kostenloser Barcode-Generator",
+    "sub": "EAN, UPC, Code 128 und mehr für Produkte, Versand und Lager. Druckfertig, ohne Anmeldung, ohne Wasserzeichen.",
+    "type": "Barcode-Typ",
+    "data": "Barcode-Daten",
+    "label": "Text unter dem Barcode (optional)",
+    "showText": "Text anzeigen",
+    "hideText": "Text ausblenden",
+    "barWidth": "Strichbreite",
+    "height": "Höhe",
+    "fontSize": "Textgröße",
+    "margin": "Rand",
+    "barColor": "Strichfarbe",
+    "fileType": "Dateityp",
+    "example": "Beispiel verwenden",
+    "invalid": "Diese Daten passen nicht zu {name}.",
+    "hints": {
+      "CODE128": "Buchstaben, Zahlen und Zeichen. Der meistgenutzte Barcode für Versand und Lager.",
+      "EAN13": "12 oder 13 Ziffern. Handelsprodukte weltweit — gib 12 Ziffern ein, wir ergänzen die Prüfziffer.",
+      "UPC": "11 oder 12 Ziffern. Handelsprodukte in den USA und Kanada.",
+      "EAN8": "7 oder 8 Ziffern. Kleine Verpackungen.",
+      "UPCE": "6 oder 8 Ziffern. Kurzer UPC für kleine Artikel.",
+      "CODE39": "Großbuchstaben, Zahlen, Leerzeichen und - . $ / + %. Industrie und Ausweise.",
+      "ITF14": "13 oder 14 Ziffern. Versandkartons und Paletten.",
+      "codabar": "Zahlen und - $ : / . + mit A, B, C oder D am Anfang und Ende. Bibliotheken und Blutbanken.",
+      "MSI": "Nur Zahlen. Lagerregale und Inventur.",
+      "pharmacode": "Eine Zahl von 3 bis 131070. Arzneimittelverpackungen."
+    },
+    "faq": [
+      {
+        "q": "Welchen Barcode-Typ soll ich nehmen?",
+        "a": "Für Produkte im Handel EAN-13 (weltweit) oder UPC-A (USA und Kanada). Für Versandetiketten, Lager und interne Codes Code 128 — er erlaubt Buchstaben und Zahlen."
+      },
+      {
+        "q": "Darf ich die Barcodes kostenlos gewerblich nutzen?",
+        "a": "Ja. Lade so viele herunter und drucke sie, wie du brauchst — für jeden Zweck, ohne Wasserzeichen und ohne Anmeldung."
+      },
+      {
+        "q": "Brauche ich eine GS1-Nummer für den Handel?",
+        "a": "Die meisten Händler verlangen bei GS1 registrierte EAN/UPC-Nummern. Dieses Tool erstellt das Barcode-Bild; es vergibt keine offizielle Produktnummer."
+      },
+      {
+        "q": "Welches Format ist am besten zum Drucken?",
+        "a": "SVG oder PDF. Das sind Vektordateien, die Striche bleiben in jeder Größe scharf — wichtig für Scanner."
+      },
+      {
+        "q": "Warum lässt sich mein Barcode nicht scannen?",
+        "a": "Nutze dunkle Striche auf hellem Hintergrund, drucke ihn nicht zu klein und lass den weißen Rand frei. EAN und UPC brauchen eine korrekte Prüfziffer — gib für EAN-13 12 Ziffern ein, wir berechnen sie."
+      }
+    ]
   },
   footer: { tagline: "Kostenlose Online-Tools, die deine Privatsphäre respektieren.", privacy: "Datenschutz", terms: "Bedingungen", rights: "Alle Rechte vorbehalten.", madeFree: "Für immer kostenlos. Ohne Anmeldung." },
 };

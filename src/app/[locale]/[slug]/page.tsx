@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import QrStudio from "@/components/QrStudio";
 import Scanner from "@/components/Scanner";
 import Bulk from "@/components/Bulk";
+import Barcode from "@/components/Barcode";
 import { TypeGrid, Features, Compare, HowTo, Faq, JsonLd, faqLd, appLd } from "@/components/Sections";
 import { getDict, alternates, fmt, type Dict } from "@/lib/i18n";
 import { TYPE_BY_SLUG } from "@/lib/qrTypes";
@@ -26,6 +27,7 @@ function pageText(d: Dict, slug: string): { title: string; meta: string } | null
   }
   if (slug === "qr-code-scanner") return { title: d.scanner.title, meta: d.scanner.meta };
   if (slug === "bulk-qr-code-generator") return { title: d.bulk.title, meta: d.bulk.meta };
+  if (slug === "barcode-generator") return { title: d.barcode.title, meta: d.barcode.meta };
   if (slug === "privacy") return { title: d.legal.privacyTitle, meta: d.legal.privacy[0] };
   if (slug === "terms") return { title: d.legal.termsTitle, meta: d.legal.terms[0] };
   return null;
@@ -111,6 +113,22 @@ export default async function SlugPage({ params }: P) {
           <Bulk dict={d} />
         </div>
         <Features dict={d} />
+        <TypeGrid dict={d} locale={locale} />
+      </>
+    );
+  }
+
+  if (slug === "barcode-generator") {
+    return (
+      <>
+        <JsonLd data={appLd(d.barcode.h1, p.meta, url, locale)} />
+        <JsonLd data={faqLd(d, d.barcode.faq)} />
+        <JsonLd data={crumbs(locale, d.barcode.h1, slug)} />
+        <Hero badge={d.home.badge} h1a={d.barcode.h1} sub={d.barcode.sub} />
+        <div className="mx-auto max-w-7xl px-4">
+          <Barcode dict={d} />
+        </div>
+        <Faq dict={d} items={d.barcode.faq} />
         <TypeGrid dict={d} locale={locale} />
       </>
     );

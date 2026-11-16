@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const tr: Dict = {
-  nav: { generator: "QR Oluşturucu", scanner: "QR Okuyucu", bulk: "Toplu QR", types: "QR Türleri", language: "Dil", theme: "Tema" },
+  nav: { generator: "QR Oluşturucu", scanner: "QR Okuyucu", bulk: "Toplu QR", barcode: "Barkod", types: "QR Türleri", language: "Dil", theme: "Tema" },
   home: {
     title: "Logolu Ücretsiz QR Kod Oluşturucu — Üyelik Yok, Süresi Asla Dolmaz",
     meta: "Ücretsiz özel QR kod oluşturun: logo, renkler, gradyanlar, çerçeveler, SVG ve PDF indirme, WiFi, vCard, WhatsApp ve daha fazlası. Üyelik yok, filigran yok, süresi asla dolmaz.",
@@ -133,6 +133,59 @@ const tr: Dict = {
       "Oluşturulan QR kodları her türlü kişisel veya ticari amaçla kullanabilirsiniz. Kodlanan içerikten siz sorumlusunuz.",
       "Bu hizmeti yasa dışı içeriğe, kötü amaçlı yazılıma veya oltalamaya yönlendiren kodlar için kullanmayın.",
     ],
+  },
+  barcode: {
+    "title": "Ücretsiz Barkod Oluşturucu — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Online ücretsiz barkod oluşturun: EAN-13, UPC-A, Code 128, Code 39, ITF-14 ve daha fazlası. Boyut ve renkleri ayarlayın, PNG, SVG veya PDF indirin. Üyelik yok, filigran yok.",
+    "h1": "Ücretsiz barkod oluşturucu",
+    "sub": "Ürünler, kargo ve stok için EAN, UPC, Code 128 ve daha fazlası. Baskıya hazır, üyelik yok, filigran yok.",
+    "type": "Barkod türü",
+    "data": "Barkod verisi",
+    "label": "Barkodun altındaki metin (isteğe bağlı)",
+    "showText": "Metni göster",
+    "hideText": "Metni gizle",
+    "barWidth": "Çubuk genişliği",
+    "height": "Yükseklik",
+    "fontSize": "Metin boyutu",
+    "margin": "Kenar boşluğu",
+    "barColor": "Çubuk rengi",
+    "fileType": "Dosya türü",
+    "example": "Örnek kullan",
+    "invalid": "Bu veri {name} için uygun değil.",
+    "hints": {
+      "CODE128": "Harf, rakam ve semboller. Kargo ve stokta en çok kullanılan barkod.",
+      "EAN13": "12 veya 13 hane. Dünya genelinde perakende ürünler — 12 hane girin, kontrol hanesini biz ekleriz.",
+      "UPC": "11 veya 12 hane. ABD ve Kanada'daki perakende ürünler.",
+      "EAN8": "7 veya 8 hane. Küçük ambalajlar.",
+      "UPCE": "6 veya 8 hane. Küçük ürünler için kısa UPC.",
+      "CODE39": "Büyük harf, rakam, boşluk ve - . $ / + %. Sanayi ve kimlik kartları.",
+      "ITF14": "13 veya 14 hane. Koli ve paletler.",
+      "codabar": "Rakamlar ve - $ : / . + — başta ve sonda A, B, C veya D. Kütüphaneler ve kan bankaları.",
+      "MSI": "Yalnızca rakam. Depo rafları ve envanter.",
+      "pharmacode": "3 ile 131070 arasında bir sayı. İlaç ambalajları."
+    },
+    "faq": [
+      {
+        "q": "Hangi barkod türünü kullanmalıyım?",
+        "a": "Mağazada satılan ürünler için EAN-13 (dünya geneli) veya UPC-A (ABD ve Kanada). Kargo etiketleri, stok ve iç kodlar için Code 128 — harf ve rakam kabul eder."
+      },
+      {
+        "q": "Ticari amaçla ücretsiz kullanabilir miyim?",
+        "a": "Evet. İstediğiniz kadar indirip yazdırın, her amaç için, filigransız ve üyeliksiz."
+      },
+      {
+        "q": "Mağazalarda satmak için GS1 numarası gerekir mi?",
+        "a": "Çoğu perakende mağaza GS1'e kayıtlı EAN/UPC numarası ister. Bu araç barkod görselini oluşturur; resmi ürün numarası vermez."
+      },
+      {
+        "q": "Baskı için en iyi format hangisi?",
+        "a": "SVG veya PDF. Vektör dosyalardır, çubuklar her boyutta keskin kalır — okuyucular için önemlidir."
+      },
+      {
+        "q": "Barkodum neden okunmuyor?",
+        "a": "Açık zemin üzerine koyu çubuk kullanın, çok küçük basmayın ve çevresinde beyaz boşluk bırakın. EAN ve UPC doğru kontrol hanesi ister — EAN-13 için 12 hane girin, biz hesaplarız."
+      }
+    ]
   },
   footer: { tagline: "Gizliliğinize saygı duyan ücretsiz online araçlar.", privacy: "Gizlilik", terms: "Koşullar", rights: "Tüm hakları saklıdır.", madeFree: "Sonsuza kadar ücretsiz. Üyelik yok." },
 };

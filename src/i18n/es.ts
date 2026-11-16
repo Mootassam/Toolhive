@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const es: Dict = {
-  nav: { generator: "Generador QR", scanner: "Lector QR", bulk: "QR masivo", types: "Tipos de QR", language: "Idioma", theme: "Tema" },
+  nav: { generator: "Generador QR", scanner: "Lector QR", bulk: "QR masivo", barcode: "Código de barras", types: "Tipos de QR", language: "Idioma", theme: "Tema" },
   home: {
     title: "Generador de Códigos QR Gratis con Logo — Sin registro, nunca caduca",
     meta: "Crea códigos QR personalizados gratis: logo, colores, degradados, marcos, exporta SVG y PDF, WiFi, vCard, WhatsApp y más. Sin registro, sin marca de agua, nunca caducan.",
@@ -133,6 +133,59 @@ const es: Dict = {
       "Puedes usar los códigos QR generados para cualquier fin personal o comercial. Eres responsable del contenido que codificas.",
       "No uses este servicio para crear códigos que enlacen a contenido ilegal, malware o phishing.",
     ],
+  },
+  barcode: {
+    "title": "Generador de Códigos de Barras Gratis — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Crea códigos de barras online gratis: EAN-13, UPC-A, Code 128, Code 39, ITF-14 y más. Tamaño y colores a tu gusto, descarga PNG, SVG o PDF. Sin registro ni marca de agua.",
+    "h1": "Generador de códigos de barras gratis",
+    "sub": "EAN, UPC, Code 128 y más para productos, envíos e inventario. Listo para imprimir, sin registro ni marca de agua.",
+    "type": "Tipo de código",
+    "data": "Datos del código",
+    "label": "Texto bajo el código (opcional)",
+    "showText": "Mostrar texto",
+    "hideText": "Ocultar texto",
+    "barWidth": "Ancho de barra",
+    "height": "Altura",
+    "fontSize": "Tamaño del texto",
+    "margin": "Margen",
+    "barColor": "Color de las barras",
+    "fileType": "Tipo de archivo",
+    "example": "Usar un ejemplo",
+    "invalid": "Estos datos no sirven para {name}.",
+    "hints": {
+      "CODE128": "Letras, números y símbolos. El código más usado en envíos e inventario.",
+      "EAN13": "12 o 13 dígitos. Productos de tienda en todo el mundo — escribe 12 y añadimos el dígito de control.",
+      "UPC": "11 o 12 dígitos. Productos de tienda en EE. UU. y Canadá.",
+      "EAN8": "7 u 8 dígitos. Envases pequeños.",
+      "UPCE": "6 u 8 dígitos. UPC corto para artículos pequeños.",
+      "CODE39": "Mayúsculas, números, espacio y - . $ / + %. Industria y credenciales.",
+      "ITF14": "13 o 14 dígitos. Cajas de envío y palés.",
+      "codabar": "Números y - $ : / . + con A, B, C o D al inicio y al final. Bibliotecas y bancos de sangre.",
+      "MSI": "Solo números. Estanterías de almacén e inventario.",
+      "pharmacode": "Un número de 3 a 131070. Envases farmacéuticos."
+    },
+    "faq": [
+      {
+        "q": "¿Qué tipo de código de barras debo usar?",
+        "a": "Para productos de tienda, usa EAN-13 (mundial) o UPC-A (EE. UU. y Canadá). Para etiquetas de envío, inventario y códigos internos, usa Code 128: acepta letras y números."
+      },
+      {
+        "q": "¿Puedo usarlos gratis con fines comerciales?",
+        "a": "Sí. Descarga e imprime todos los que necesites, para cualquier uso, sin marca de agua ni registro."
+      },
+      {
+        "q": "¿Necesito un número GS1 para vender en tiendas?",
+        "a": "La mayoría de tiendas exigen números EAN/UPC registrados en GS1. Esta herramienta crea la imagen del código; no asigna un número de producto oficial."
+      },
+      {
+        "q": "¿Qué formato es mejor para imprimir?",
+        "a": "SVG o PDF. Son vectoriales, así que las barras quedan nítidas a cualquier tamaño, algo importante para los lectores."
+      },
+      {
+        "q": "¿Por qué no se escanea mi código?",
+        "a": "Usa barras oscuras sobre fondo claro, no lo imprimas muy pequeño y deja el margen blanco alrededor. EAN y UPC necesitan un dígito de control correcto: escribe 12 dígitos para EAN-13 y lo calculamos por ti."
+      }
+    ]
   },
   footer: { tagline: "Herramientas online gratis que respetan tu privacidad.", privacy: "Privacidad", terms: "Términos", rights: "Todos los derechos reservados.", madeFree: "Gratis para siempre. Sin registro." },
 };

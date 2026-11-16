@@ -1,5 +1,5 @@
 const en = {
-  nav: { generator: "QR Generator", scanner: "QR Scanner", bulk: "Bulk QR", types: "QR Types", language: "Language", theme: "Theme" },
+  nav: { generator: "QR Generator", scanner: "QR Scanner", bulk: "Bulk QR", barcode: "Barcode", types: "QR Types", language: "Language", theme: "Theme" },
   home: {
     title: "Free QR Code Generator with Logo — No Sign-up, Never Expires",
     meta: "Create custom QR codes free: logo, colors, gradients, frames, SVG & PDF export, WiFi, vCard, WhatsApp, UPI and more. No sign-up, no watermark, codes never expire.",
@@ -131,6 +131,59 @@ const en = {
       "You may use generated QR codes for any personal or commercial purpose. You are responsible for the content you encode.",
       "Do not use this service to create codes that link to illegal content, malware or phishing.",
     ],
+  },
+  barcode: {
+    "title": "Free Barcode Generator — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Create barcodes online for free: EAN-13, UPC-A, Code 128, Code 39, ITF-14 and more. Custom size and colors, download PNG, SVG or PDF. No sign-up, no watermark.",
+    "h1": "Free barcode generator",
+    "sub": "EAN, UPC, Code 128 and more for products, shipping and inventory. Print-ready, no sign-up, no watermark.",
+    "type": "Barcode type",
+    "data": "Barcode data",
+    "label": "Text under the barcode (optional)",
+    "showText": "Show text",
+    "hideText": "Hide text",
+    "barWidth": "Bar width",
+    "height": "Height",
+    "fontSize": "Text size",
+    "margin": "Margin",
+    "barColor": "Bars color",
+    "fileType": "File type",
+    "example": "Use an example",
+    "invalid": "This data doesn't fit {name}.",
+    "hints": {
+      "CODE128": "Letters, numbers and symbols. The most used barcode for shipping and inventory.",
+      "EAN13": "12 or 13 digits. Retail products worldwide — enter 12 digits and we add the check digit.",
+      "UPC": "11 or 12 digits. Retail products in the USA and Canada.",
+      "EAN8": "7 or 8 digits. Small retail packages.",
+      "UPCE": "6 or 8 digits. Short UPC for small items.",
+      "CODE39": "Capital letters, numbers, space and - . $ / + %. Used in industry and ID badges.",
+      "ITF14": "13 or 14 digits. Shipping cartons and pallets.",
+      "codabar": "Numbers and - $ : / . + with A, B, C or D at the start and end. Libraries and blood banks.",
+      "MSI": "Numbers only. Warehouse shelves and inventory.",
+      "pharmacode": "A number from 3 to 131070. Pharmaceutical packaging."
+    },
+    "faq": [
+      {
+        "q": "Which barcode type should I use?",
+        "a": "For products sold in shops, use EAN-13 (worldwide) or UPC-A (USA and Canada). For shipping labels, inventory and internal codes, use Code 128 — it accepts letters and numbers."
+      },
+      {
+        "q": "Are these barcodes free for commercial use?",
+        "a": "Yes. Download and print as many as you need, for any purpose, with no watermark and no sign-up."
+      },
+      {
+        "q": "Do I need a GS1 number to sell in stores?",
+        "a": "Most retail stores require EAN/UPC numbers registered with GS1. This tool creates the barcode image; it does not give you an official product number."
+      },
+      {
+        "q": "Which file format is best for printing?",
+        "a": "SVG or PDF. They are vector files, so the bars stay sharp at any size — important for scanners."
+      },
+      {
+        "q": "Why doesn't my barcode scan?",
+        "a": "Use dark bars on a light background, don't print it too small and keep the white margin around it. EAN and UPC need a correct check digit — enter 12 digits for EAN-13 and we calculate it for you."
+      }
+    ]
   },
   footer: { tagline: "Free online tools that respect your privacy.", privacy: "Privacy", terms: "Terms", rights: "All rights reserved.", madeFree: "Free forever. No sign-up." },
 };

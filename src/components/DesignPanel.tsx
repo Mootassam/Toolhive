@@ -265,7 +265,7 @@ function Pick({ active, onClick, label, html }: { active: boolean; onClick: () =
   );
 }
 
-function Seg({ value, options, onChange }: { value: string; options: [string, string][]; onChange: (v: string) => void }) {
+export function Seg({ value, options, onChange }: { value: string; options: [string, string][]; onChange: (v: string) => void }) {
   return (
     <div className="inline-flex flex-wrap gap-1 rounded-xl bg-slate-100 p-1 dark:bg-slate-800">
       {options.map(([v, l]) => (
@@ -290,7 +290,7 @@ export function Range({ label, min, max, step, value, onChange }: { label: strin
   );
 }
 
-function ColorField({ label, value, onChange, reset, resetLabel }: { label: string; value: string; onChange: (v: string) => void; reset?: () => void; resetLabel?: string }) {
+export function ColorField({ label, value, onChange, reset, resetLabel }: { label: string; value: string; onChange: (v: string) => void; reset?: () => void; resetLabel?: string }) {
   const [txt, setTxt] = useState(value);
   useEffect(() => setTxt(value), [value]);
   return (

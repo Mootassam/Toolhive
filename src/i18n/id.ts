@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const id: Dict = {
-  nav: { generator: "Pembuat QR", scanner: "Pemindai QR", bulk: "QR Massal", types: "Jenis QR", language: "Bahasa", theme: "Tema" },
+  nav: { generator: "Pembuat QR", scanner: "Pemindai QR", bulk: "QR Massal", barcode: "Barcode", types: "Jenis QR", language: "Bahasa", theme: "Tema" },
   home: {
     title: "Pembuat Kode QR Gratis dengan Logo — Tanpa Daftar, Tidak Pernah Kedaluwarsa",
     meta: "Buat kode QR kustom gratis: logo, warna, gradasi, bingkai, ekspor SVG & PDF, WiFi, vCard, WhatsApp, dan lainnya. Tanpa daftar, tanpa watermark, tidak pernah kedaluwarsa.",
@@ -133,6 +133,59 @@ const id: Dict = {
       "Anda boleh memakai kode QR yang dibuat untuk tujuan pribadi atau komersial apa pun. Anda bertanggung jawab atas konten yang dikodekan.",
       "Jangan gunakan layanan ini untuk membuat kode yang mengarah ke konten ilegal, malware, atau phishing.",
     ],
+  },
+  barcode: {
+    "title": "Generator Barcode Gratis — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Buat barcode online gratis: EAN-13, UPC-A, Code 128, Code 39, ITF-14 dan lainnya. Atur ukuran dan warna, unduh PNG, SVG atau PDF. Tanpa daftar, tanpa watermark.",
+    "h1": "Generator barcode gratis",
+    "sub": "EAN, UPC, Code 128 dan lainnya untuk produk, pengiriman dan stok. Siap cetak, tanpa daftar, tanpa watermark.",
+    "type": "Jenis barcode",
+    "data": "Data barcode",
+    "label": "Teks di bawah barcode (opsional)",
+    "showText": "Tampilkan teks",
+    "hideText": "Sembunyikan teks",
+    "barWidth": "Lebar batang",
+    "height": "Tinggi",
+    "fontSize": "Ukuran teks",
+    "margin": "Margin",
+    "barColor": "Warna batang",
+    "fileType": "Jenis file",
+    "example": "Pakai contoh",
+    "invalid": "Data ini tidak cocok untuk {name}.",
+    "hints": {
+      "CODE128": "Huruf, angka dan simbol. Barcode paling umum untuk pengiriman dan stok.",
+      "EAN13": "12 atau 13 digit. Produk ritel di seluruh dunia — ketik 12 digit, kami tambahkan digit cek.",
+      "UPC": "11 atau 12 digit. Produk ritel di AS dan Kanada.",
+      "EAN8": "7 atau 8 digit. Kemasan kecil.",
+      "UPCE": "6 atau 8 digit. UPC pendek untuk barang kecil.",
+      "CODE39": "Huruf besar, angka, spasi dan - . $ / + %. Industri dan kartu identitas.",
+      "ITF14": "13 atau 14 digit. Kardus pengiriman dan palet.",
+      "codabar": "Angka dan - $ : / . + dengan A, B, C atau D di awal dan akhir. Perpustakaan dan bank darah.",
+      "MSI": "Hanya angka. Rak gudang dan inventaris.",
+      "pharmacode": "Angka dari 3 sampai 131070. Kemasan obat."
+    },
+    "faq": [
+      {
+        "q": "Jenis barcode mana yang harus saya pakai?",
+        "a": "Untuk produk yang dijual di toko, pakai EAN-13 (internasional) atau UPC-A (AS dan Kanada). Untuk label pengiriman, stok dan kode internal, pakai Code 128 — bisa huruf dan angka."
+      },
+      {
+        "q": "Bolehkah dipakai gratis untuk bisnis?",
+        "a": "Boleh. Unduh dan cetak sebanyak yang Anda perlukan, untuk keperluan apa pun, tanpa watermark dan tanpa daftar."
+      },
+      {
+        "q": "Apakah saya perlu nomor GS1 untuk jual di toko?",
+        "a": "Sebagian besar toko ritel meminta nomor EAN/UPC yang terdaftar di GS1. Alat ini membuat gambar barcode; tidak memberi nomor produk resmi."
+      },
+      {
+        "q": "Format apa yang terbaik untuk dicetak?",
+        "a": "SVG atau PDF. Keduanya file vektor, jadi batang tetap tajam di ukuran berapa pun — penting untuk scanner."
+      },
+      {
+        "q": "Kenapa barcode saya tidak bisa dipindai?",
+        "a": "Gunakan batang gelap di latar terang, jangan cetak terlalu kecil dan sisakan margin putih di sekelilingnya. EAN dan UPC butuh digit cek yang benar — ketik 12 digit untuk EAN-13 dan kami hitungkan."
+      }
+    ]
   },
   footer: { tagline: "Alat online gratis yang menghormati privasi Anda.", privacy: "Privasi", terms: "Ketentuan", rights: "Hak cipta dilindungi.", madeFree: "Gratis selamanya. Tanpa daftar." },
 };

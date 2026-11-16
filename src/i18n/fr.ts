@@ -1,7 +1,7 @@
 import type { Dict } from "./en";
 
 const fr: Dict = {
-  nav: { generator: "Générateur QR", scanner: "Scanner QR", bulk: "QR en masse", types: "Types de QR", language: "Langue", theme: "Thème" },
+  nav: { generator: "Générateur QR", scanner: "Scanner QR", bulk: "QR en masse", barcode: "Code-barres", types: "Types de QR", language: "Langue", theme: "Thème" },
   home: {
     title: "Générateur de QR Code Gratuit avec Logo — Sans inscription, n'expire jamais",
     meta: "Créez des QR codes personnalisés gratuitement : logo, couleurs, dégradés, cadres, export SVG et PDF, WiFi, vCard, WhatsApp et plus. Sans inscription, sans filigrane, n'expirent jamais.",
@@ -133,6 +133,59 @@ const fr: Dict = {
       "Vous pouvez utiliser les QR codes générés à toute fin personnelle ou commerciale. Vous êtes responsable du contenu encodé.",
       "N'utilisez pas ce service pour créer des codes menant à du contenu illégal, des logiciels malveillants ou du phishing.",
     ],
+  },
+  barcode: {
+    "title": "Générateur de Code-Barres Gratuit — EAN-13, UPC, Code 128 | PNG, SVG, PDF",
+    "meta": "Créez des codes-barres en ligne gratuitement : EAN-13, UPC-A, Code 128, Code 39, ITF-14 et plus. Taille et couleurs personnalisées, téléchargement PNG, SVG ou PDF. Sans inscription, sans filigrane.",
+    "h1": "Générateur de code-barres gratuit",
+    "sub": "EAN, UPC, Code 128 et plus pour vos produits, expéditions et stocks. Prêt à imprimer, sans inscription, sans filigrane.",
+    "type": "Type de code-barres",
+    "data": "Données du code",
+    "label": "Texte sous le code (facultatif)",
+    "showText": "Afficher le texte",
+    "hideText": "Masquer le texte",
+    "barWidth": "Largeur des barres",
+    "height": "Hauteur",
+    "fontSize": "Taille du texte",
+    "margin": "Marge",
+    "barColor": "Couleur des barres",
+    "fileType": "Type de fichier",
+    "example": "Utiliser un exemple",
+    "invalid": "Ces données ne conviennent pas à {name}.",
+    "hints": {
+      "CODE128": "Lettres, chiffres et symboles. Le code le plus utilisé pour l'expédition et les stocks.",
+      "EAN13": "12 ou 13 chiffres. Produits de commerce dans le monde entier — saisissez 12 chiffres, on ajoute la clé de contrôle.",
+      "UPC": "11 ou 12 chiffres. Produits de commerce aux États-Unis et au Canada.",
+      "EAN8": "7 ou 8 chiffres. Petits emballages.",
+      "UPCE": "6 ou 8 chiffres. UPC court pour petits articles.",
+      "CODE39": "Majuscules, chiffres, espace et - . $ / + %. Industrie et badges.",
+      "ITF14": "13 ou 14 chiffres. Cartons d'expédition et palettes.",
+      "codabar": "Chiffres et - $ : / . + avec A, B, C ou D au début et à la fin. Bibliothèques et banques du sang.",
+      "MSI": "Chiffres uniquement. Rayonnages d'entrepôt et inventaire.",
+      "pharmacode": "Un nombre de 3 à 131070. Emballages pharmaceutiques."
+    },
+    "faq": [
+      {
+        "q": "Quel type de code-barres choisir ?",
+        "a": "Pour les produits vendus en magasin, utilisez EAN-13 (monde) ou UPC-A (États-Unis et Canada). Pour les étiquettes d'expédition, les stocks et les codes internes, utilisez Code 128 : il accepte lettres et chiffres."
+      },
+      {
+        "q": "Puis-je les utiliser gratuitement à des fins commerciales ?",
+        "a": "Oui. Téléchargez et imprimez-en autant que nécessaire, pour tout usage, sans filigrane ni inscription."
+      },
+      {
+        "q": "Ai-je besoin d'un numéro GS1 pour vendre en magasin ?",
+        "a": "La plupart des magasins exigent des numéros EAN/UPC enregistrés auprès de GS1. Cet outil crée l'image du code-barres ; il ne fournit pas de numéro de produit officiel."
+      },
+      {
+        "q": "Quel format est le meilleur pour l'impression ?",
+        "a": "SVG ou PDF. Ce sont des fichiers vectoriels : les barres restent nettes à toutes les tailles, ce qui compte pour les lecteurs."
+      },
+      {
+        "q": "Pourquoi mon code-barres ne se lit pas ?",
+        "a": "Utilisez des barres foncées sur fond clair, ne l'imprimez pas trop petit et gardez la marge blanche autour. EAN et UPC exigent une clé de contrôle correcte : saisissez 12 chiffres pour un EAN-13 et nous la calculons."
+      }
+    ]
   },
   footer: { tagline: "Des outils en ligne gratuits qui respectent votre vie privée.", privacy: "Confidentialité", terms: "Conditions", rights: "Tous droits réservés.", madeFree: "Gratuit pour toujours. Sans inscription." },
 };

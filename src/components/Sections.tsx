@@ -97,12 +97,14 @@ export function HowTo({ dict }: { dict: Dict }) {
   );
 }
 
-export function Faq({ dict }: { dict: Dict }) {
+type QA = { q: string; a: string };
+
+export function Faq({ dict, items = dict.faq.items }: { dict: Dict; items?: QA[] }) {
   return (
     <section className="mx-auto max-w-3xl px-4 py-16">
       <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">{dict.faq.title}</h2>
       <div className="mt-10 space-y-3">
-        {dict.faq.items.map((f, i) => (
+        {items.map((f, i) => (
           <details key={i} className="group rounded-2xl border border-slate-200 bg-white p-5 open:shadow-soft dark:border-slate-800 dark:bg-slate-900" open={i === 0}>
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold">
               <h3>{f.q}</h3>
@@ -135,6 +137,7 @@ export function Footer({ dict, locale }: { dict: Dict; locale: Locale }) {
           ))}
           <Link href={`/${locale}/qr-code-scanner`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.nav.scanner}</Link>
           <Link href={`/${locale}/bulk-qr-code-generator`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.nav.bulk}</Link>
+          <Link href={`/${locale}/barcode-generator`} className="text-slate-600 hover:text-brand-600 dark:text-slate-400">{dict.barcode.h1}</Link>
         </div>
       </div>
       <div className="border-t border-slate-100 dark:border-slate-800">
@@ -154,11 +157,11 @@ export function JsonLd({ data }: { data: unknown }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }
 
-export function faqLd(dict: Dict) {
+export function faqLd(dict: Dict, items: QA[] = dict.faq.items) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: dict.faq.items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    mainEntity: items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
 }
 
